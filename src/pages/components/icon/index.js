@@ -12,20 +12,18 @@ export default function Icon () {
       <ClFlex wrap justify='around' align='start'>
         {
           icons.map((item) => (
-              <ClCard type='card' key={item.name}>
-
-                <ClFlex>
-                  <View style={{width: pxTransform(130)}}>
-                    <ClFlex justify='center' align='center'>
-                      <ClIcon color='grey' size='xlarge' iconName={item.name} />
-                    </ClFlex>
-                    <ClFlex justify='center' align='center' wrap>
-                      <ClText size='small' textColor='grey'>{item.name}</ClText>
-                    </ClFlex>
-                  </View>
-                </ClFlex>
-              </ClCard>
-
+            <ClCard type='card' key={item.name}>
+              <ClFlex>
+                <View style={{ width: pxTransform(130) }}>
+                  <ClFlex justify='center' align='center'>
+                    <ClIcon color='grey' size='xlarge' iconName={item.name} />
+                  </ClFlex>
+                  <ClFlex justify='center' align='center' wrap>
+                    <ClText size='small' textColor='grey'>{item.name}</ClText>
+                  </ClFlex>
+                </View>
+              </ClFlex>
+            </ClCard>
           ))
         }
       </ClFlex>
