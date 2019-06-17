@@ -23,7 +23,10 @@ class App extends Component {
       'pages/form/index',
       'pages/layout/index',
       'pages/navigate/index',
-      'pages/view/index'
+      'pages/view/index',
+
+      // 组件
+      'pages/components/icon/index'
     ],
     window: {
       backgroundTextStyle: 'light',

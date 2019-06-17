@@ -28,6 +28,9 @@ export default [
 
 export const baseList = [
   {
+    key: 'color',
+    name: 'Color 颜色'
+  }, {
     key: 'icon',
     name: 'Icon 图标'
   }, {
