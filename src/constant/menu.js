@@ -25,3 +25,117 @@ export default [
     description: '包含导航栏、标签栏、标签页等'
   }
 ]
+
+export const baseList = [
+  {
+    key: 'icon',
+    name: 'Icon 图标'
+  }, {
+    key: 'button',
+    name: 'Button 按钮'
+  }, {
+    key: 'text',
+    name: 'Text 文字'
+  }
+]
+
+export const actionList = [
+  {
+    key: 'modal',
+    name: 'Modal 模态框'
+  }, {
+    key: 'progress',
+    name: 'Progress 进度条'
+  }, {
+    key: 'loading',
+    name: 'Loading 加载'
+  }
+]
+
+export const viewList = [
+  {
+    key: 'avatar',
+    name: 'Avatar 头像'
+  }, {
+    key: 'tag',
+    name: 'Tag 标签'
+  }, {
+    key: 'timeline',
+    name: 'Timeline 时间轴'
+  }, {
+    key: 'swiper',
+    name: 'Swiper 滑动视图'
+  }, {
+    key: 'steps',
+    name: 'Steps 步骤条'
+  }, {
+    key: 'searchBar',
+    name: 'SearchBar 搜索栏'
+  }, {
+    key: 'shopBar',
+    name: 'ShopBar 购物栏'
+  }, {
+    key: 'titleBar',
+    name: 'TitleBar 标题栏'
+  }
+]
+
+export const formList = [
+  {
+    key: 'input',
+    name: 'Input 输入框'
+  }, {
+    key: 'radio',
+    name: 'Radio 单选按钮'
+  }, {
+    key: 'checkbox',
+    name: 'Checkbox 多选按钮'
+  }, {
+    key: 'switch',
+    name: 'Switch 开关'
+  }, {
+    key: 'select',
+    name: 'Select 选择器'
+  }, {
+    key: 'imagePicker',
+    name: 'ImagePicker 图片选择器'
+  }
+]
+
+export const layoutList = [
+  {
+    key: 'layout',
+    name: 'Layout 基本布局'
+  }, {
+    key: 'flex',
+    name: 'Flex 弹性布局'
+  }, {
+    key: 'grid',
+    name: 'Grid 栅格布局'
+  }, {
+    key: 'menuList',
+    name: 'MenuList 菜单列表'
+  }, {
+    key: 'card',
+    name: 'Card 卡片'
+  }, {
+    key: 'drawer',
+    name: 'Drawer 抽屉'
+  }, {
+    key: 'screenDrawer',
+    name: 'ScreenDrawer 全屏抽屉'
+  }
+]
+
+export const navigateList = [
+  {
+    key: 'navBar',
+    name: 'NavBar 导航栏'
+  }, {
+    key: 'tabBar',
+    name: 'TabBar 标签栏'
+  }, {
+    key: 'tabs',
+    name: 'Tabs 标签页'
+  }
+]

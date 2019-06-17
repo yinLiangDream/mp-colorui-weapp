@@ -14,7 +14,16 @@ import './app.scss'
 class App extends Component {
   config = {
     pages: [
-      'pages/index/index'
+      // 首页
+      'pages/index/index',
+
+      // 组件导航
+      'pages/base/index',
+      'pages/action/index',
+      'pages/form/index',
+      'pages/layout/index',
+      'pages/navigate/index',
+      'pages/view/index'
     ],
     window: {
       backgroundTextStyle: 'light',
