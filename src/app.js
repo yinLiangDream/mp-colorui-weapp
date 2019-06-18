@@ -1,6 +1,9 @@
 import Taro, { Component } from '@tarojs/taro'
+import '@tarojs/async-await'
+
 import Index from './pages/index'
 // import router from './router'
+
 
 import './app.scss'
 
@@ -10,6 +13,7 @@ import './app.scss'
 //   require('nerv-devtools')
 // }
 
+Taro.cloud.init()
 
 class App extends Component {
   config = {
@@ -32,7 +36,8 @@ class App extends Component {
       'pages/components/button/index',
       'pages/components/avatar/index',
       'pages/components/tag/index',
-      'pages/components/timeline/index'
+      'pages/components/timeline/index',
+      'pages/components/swiper/index'
     ],
     window: {
       backgroundTextStyle: 'light',
