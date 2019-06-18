@@ -2,16 +2,14 @@ import Taro from '@tarojs/taro'
 import { Block, View } from '@tarojs/components'
 import { ClCard, ClFlex, ClText, ClTitleBar } from 'mp-colorui'
 
-import { toMidLine } from '../../../util'
+import {convertLightColor } from '../../../util'
 
 import colors from '../../../constant/color'
-
-const dealLight = (color) => toMidLine(color).split('-').reverse().join('-');
 
 export default class Color extends Taro.Component {
   renderCard (item) {
     return (
-      <ClCard bgColor={item.title.includes('Light') ? dealLight(item.title) : item.title}>
+      <ClCard bgColor={item.title.includes('Light') ? convertLightColor(item.title) : item.title}>
         <ClFlex justify='around'>
           <ClText>{item.title}</ClText>
           <ClText special='upper'>{item.color}</ClText>
