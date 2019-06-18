@@ -27,7 +27,8 @@ class App extends Component {
 
       // 组件
       'pages/components/icon/index',
-      'pages/components/color/index'
+      'pages/components/color/index',
+      'pages/components/text/index',
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "mp-colorui-mp",
+  "projectname": "mp-colorui-weapp",
   "description": "MP-ColorUI 的小程序介绍版本",
-  "appid": "touristappid",
+  "appid": "wxf69bb819ff6a9b2e",
   "setting": {
     "urlCheck": true,
     "es6": false,
