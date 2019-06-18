@@ -29,7 +29,8 @@ class App extends Component {
       'pages/components/icon/index',
       'pages/components/color/index',
       'pages/components/text/index',
-      'pages/components/button/index'
+      'pages/components/button/index',
+      'pages/components/avatar/index'
     ],
     window: {
       backgroundTextStyle: 'light',

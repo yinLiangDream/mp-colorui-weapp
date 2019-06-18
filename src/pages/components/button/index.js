@@ -12,7 +12,7 @@ export default class ButtonView extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='blue' />
+        <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='shadow' />
         <ClFlex justify='around' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -24,7 +24,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='尺寸' textColor='blue' type='sub-title' subTitle='size' subTitleColor='blue' />
+        <ClTitleBar title='尺寸' textColor='blue' type='sub-title' subTitle='size' subTitleColor='shadow' />
         <ClFlex justify='around' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -37,7 +37,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='按钮颜色' textColor='blue' type='sub-title' subTitle='bgColor' subTitleColor='blue' />
+        <ClTitleBar title='按钮颜色' textColor='blue' type='sub-title' subTitle='bgColor' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -76,7 +76,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='按钮镂空' textColor='blue' type='sub-title' subTitle='plain' subTitleColor='blue' />
+        <ClTitleBar title='按钮镂空' textColor='blue' type='sub-title' subTitle='plain' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -93,7 +93,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='块状按钮' textColor='blue' type='sub-title' subTitle='long' subTitleColor='blue' />
+        <ClTitleBar title='块状按钮' textColor='blue' type='sub-title' subTitle='long' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -102,12 +102,12 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='失效按钮' textColor='blue' type='sub-title' subTitle='disabled' subTitleColor='blue' />
+        <ClTitleBar title='失效按钮' textColor='blue' type='sub-title' subTitle='disabled' subTitleColor='shadow' />
         <ClCard>
           <ClButton shape='round' bgColor='blue' long disabled>禁止按钮</ClButton>
         </ClCard>
 
-        <ClTitleBar title='加载中' textColor='blue' type='sub-title' subTitle='loading' subTitleColor='blue' />
+        <ClTitleBar title='加载中' textColor='blue' type='sub-title' subTitle='loading' subTitleColor='shadow' />
         <ClCard>
           <ClButton shape='round' bgColor='blue' long loading>加载中</ClButton>
         </ClCard>

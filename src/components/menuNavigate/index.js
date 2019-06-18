@@ -1,7 +1,6 @@
 import Taro from '@tarojs/taro'
 import PropTypes from 'prop-types';
 import { ClMenuList } from 'mp-colorui'
-import { baseList } from '../../constant/menu'
 
 export default function MenuNavigate (props) {
   return (
@@ -10,7 +9,7 @@ export default function MenuNavigate (props) {
       shortBorder
       onClick={(index) => {
         Taro.navigateTo({
-          url: `/pages/components/${baseList[index].key}/index`
+          url: `/pages/components/${this.props.list[index].key}/index`
         })
       }}
       list={props.list.map(item => ({
