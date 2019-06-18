@@ -31,7 +31,8 @@ class App extends Component {
       'pages/components/text/index',
       'pages/components/button/index',
       'pages/components/avatar/index',
-      'pages/components/tag/index'
+      'pages/components/tag/index',
+      'pages/components/timeline/index'
     ],
     window: {
       backgroundTextStyle: 'light',

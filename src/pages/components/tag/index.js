@@ -16,6 +16,9 @@ const tags = [
 ]
 
 export default class Tag extends Taro.Component {
+  config = {
+    navigationBarTitleText: 'Tag 标签'
+  }
   render () {
     return (
       <ClLayout>
