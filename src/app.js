@@ -13,7 +13,7 @@ import './app.scss'
 //   require('nerv-devtools')
 // }
 
-Taro.cloud.init()
+// Taro.cloud.init()
 
 class App extends Component {
   config = {
@@ -37,7 +37,8 @@ class App extends Component {
       'pages/components/avatar/index',
       'pages/components/tag/index',
       'pages/components/timeline/index',
-      'pages/components/swiper/index'
+      'pages/components/swiper/index',
+      'pages/components/steps/index'
     ],
     window: {
       backgroundTextStyle: 'light',

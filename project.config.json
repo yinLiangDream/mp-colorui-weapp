@@ -29,12 +29,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "swiper",
 					"pathName": "pages/components/swiper/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "steps",
+					"pathName": "pages/components/steps/index",
 					"scene": null
 				}
 			]
