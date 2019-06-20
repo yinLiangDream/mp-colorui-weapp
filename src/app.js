@@ -50,7 +50,8 @@ class App extends Component {
       'pages/components/checkbox/index',
       'pages/components/switch/index',
       'pages/components/select/index',
-      'pages/components/imagePicker/index'
+      'pages/components/imagePicker/index',
+      'pages/components/layout/index'
     ],
     window: {
       backgroundTextStyle: 'light',
