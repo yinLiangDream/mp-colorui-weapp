@@ -45,7 +45,8 @@ class App extends Component {
       'pages/components/modal/index',
       'pages/components/progress/index',
       'pages/components/loading/index',
-      'pages/components/input/index'
+      'pages/components/input/index',
+      'pages/components/radio/index'
     ],
     window: {
       backgroundTextStyle: 'light',
