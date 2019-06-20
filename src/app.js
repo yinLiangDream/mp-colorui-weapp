@@ -44,7 +44,8 @@ class App extends Component {
       'pages/components/titleBar/index',
       'pages/components/modal/index',
       'pages/components/progress/index',
-      'pages/components/loading/index'
+      'pages/components/loading/index',
+      'pages/components/input/index'
     ],
     window: {
       backgroundTextStyle: 'light',
