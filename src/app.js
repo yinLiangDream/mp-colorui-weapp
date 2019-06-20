@@ -47,7 +47,8 @@ class App extends Component {
       'pages/components/loading/index',
       'pages/components/input/index',
       'pages/components/radio/index',
-      'pages/components/checkbox/index'
+      'pages/components/checkbox/index',
+      'pages/components/switch/index'
     ],
     window: {
       backgroundTextStyle: 'light',
