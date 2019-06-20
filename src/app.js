@@ -51,7 +51,8 @@ class App extends Component {
       'pages/components/switch/index',
       'pages/components/select/index',
       'pages/components/imagePicker/index',
-      'pages/components/layout/index'
+      'pages/components/layout/index',
+      'pages/components/flex/index'
     ],
     window: {
       backgroundTextStyle: 'light',
