@@ -39,7 +39,8 @@ class App extends Component {
       'pages/components/timeline/index',
       'pages/components/swiper/index',
       'pages/components/steps/index',
-      'pages/components/searchBar/index'
+      'pages/components/searchBar/index',
+      'pages/components/shopBar/index'
     ],
     window: {
       backgroundTextStyle: 'light',
