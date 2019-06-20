@@ -43,7 +43,8 @@ class App extends Component {
       'pages/components/shopBar/index',
       'pages/components/titleBar/index',
       'pages/components/modal/index',
-      'pages/components/progress/index'
+      'pages/components/progress/index',
+      'pages/components/loading/index'
     ],
     window: {
       backgroundTextStyle: 'light',
