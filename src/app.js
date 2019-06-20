@@ -40,7 +40,8 @@ class App extends Component {
       'pages/components/swiper/index',
       'pages/components/steps/index',
       'pages/components/searchBar/index',
-      'pages/components/shopBar/index'
+      'pages/components/shopBar/index',
+      'pages/components/titleBar/index'
     ],
     window: {
       backgroundTextStyle: 'light',
