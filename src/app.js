@@ -54,7 +54,8 @@ class App extends Component {
       'pages/components/layout/index',
       'pages/components/flex/index',
       'pages/components/grid/index',
-      'pages/components/menuList/index'
+      'pages/components/menuList/index',
+      'pages/components/card/index'
     ],
     window: {
       backgroundTextStyle: 'light',
