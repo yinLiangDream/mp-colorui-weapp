@@ -47,7 +47,7 @@ export default class Grid extends Taro.Component {
 
         <ClTitleBar title='等高' textColor='blue' type='sub-title' subTitle='square' subTitleColor='shadow' />
         <ClCard>
-          <ClGrid mode={'square'} col={3}>
+          <ClGrid mode='square' col={3}>
             <View className='bg-blue light'>1</View>
             <View className='bg-brown light'>2</View>
             <View className='bg-blue light'>3</View>
