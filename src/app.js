@@ -58,7 +58,8 @@ class App extends Component {
       'pages/components/card/index',
       'pages/components/drawer/index',
       'pages/components/screenDrawer/index',
-      'pages/components/navBar/index'
+      'pages/components/navBar/index',
+      'pages/components/tabBar/index'
     ],
     window: {
       backgroundTextStyle: 'light',
