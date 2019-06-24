@@ -12,21 +12,21 @@ export default function Drawer() {
         <ClButton long onClick={() => {
           setLeft(true)
         }}
-          shape='radius'
+          shape='round'
         >我是左侧抽屉</ClButton>
       </ClCard>
       <ClCard>
         <ClButton long onClick={() => {
           setRight(true)
         }}
-          shape='radius'
+          shape='round'
         >我是右侧抽屉</ClButton>
       </ClCard>
       <ClCard>
         <ClButton long onClick={() => {
           setBottom(true)
         }}
-          shape='radius'
+          shape='round'
         >我是下侧抽屉</ClButton>
       </ClCard>
       <ClDrawer show={left} direction='left' onCancel={() => {
