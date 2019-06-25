@@ -13,7 +13,7 @@ import './app.scss'
 //   require('nerv-devtools')
 // }
 
-// Taro.cloud.init()
+Taro.cloud.init()
 
 class App extends Component {
   config = {
