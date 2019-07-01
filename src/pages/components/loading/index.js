@@ -12,8 +12,8 @@ export default function Loading () {
     <ClLayout>
       <ClTitleBar title='bar加载' textColor='blue' type='sub-title' subTitle='bar' subTitleColor='shadow' />
       <ClCard>
-        <ClSwitch title='bar加载' type='form' onChange={(falg) => {
-          setBarLoading(falg)
+        <ClSwitch title='bar加载' type='form' checked={barLoading} onChange={(flag) => {
+          setBarLoading(flag)
         }}
         />
       </ClCard>

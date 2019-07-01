@@ -10,13 +10,10 @@ export default class SwiperView extends Taro.Component {
     list: []
   }
 
-  async componentDidMount () {
-    const res = await Taro.cloud.getTempFileURL({
-      fileList: ['cloud://test-b95faa.7465-test-b95faa/swiper/swiper1.jpg', 'cloud://test-b95faa.7465-test-b95faa/swiper/swiper2.jpg']
-    })
-    console.log(res)
-    const list = res.fileList.map(item => ({
-      url: item.tempFileURL,
+  componentDidMount () {
+    const fileList = ['https://mp-yys-1255362963.cos.ap-chengdu.myqcloud.com/mp-bgcolor/swiper1.jpg', 'https://mp-yys-1255362963.cos.ap-chengdu.myqcloud.com/mp-bgcolor/swiper2.jpg']
+    const list = fileList.map(item => ({
+      url: item,
       type: 'image'
     }))
     this.setState({
