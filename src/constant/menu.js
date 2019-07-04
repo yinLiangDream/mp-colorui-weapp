@@ -52,6 +52,9 @@ export const actionList = [
   }, {
     key: 'loading',
     name: 'Loading 加载'
+  }, {
+    key: 'animation',
+    name: 'Animation 动画'
   }
 ]
 
