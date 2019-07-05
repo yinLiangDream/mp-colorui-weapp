@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { ClCard, ClText, ClIcon, ClLayout, ClFlex, ClTabBar, ClTimeline } from 'mp-colorui'
+import { ClCard, ClText, ClIcon, ClLayout, ClFlex, ClTabBar, ClTimeline, ClAnimation } from 'mp-colorui'
 import { updateList } from '../../model/index'
 import menu from '../../constant/menu'
 
@@ -13,16 +13,20 @@ export default class Index extends Component {
   }
 
   state = {
-    active: 0
+    active: 0,
+    animate: '',
+    show: false
   }
 
   componentWillMount () { }
 
-  async componentDidMount () {
-    // const res = await Taro.request({
-    //   url: 'https://md-1255362963.cos.ap-chengdu.myqcloud.com/mpcolorui/index.json'
-    // })
-    // console.log(res)
+  componentDidMount () {
+    setTimeout(() => {
+      this.setState({
+        animate: 'scale-up',
+        show: true
+      })
+    },100)
   }
 
   componentWillUnmount () { }
@@ -32,6 +36,7 @@ export default class Index extends Component {
   componentDidHide () { }
 
   render () {
+    const { active, animate, show } = this.state
     const icons = [
       'emoji',
       'cascades',
@@ -58,32 +63,34 @@ export default class Index extends Component {
         })
       }}
       >
-        <ClCard>
-          <ClFlex justify='between' align='center'>
-            <ClFlex align='center'>
-              <ClIcon iconName={icons[index]} color='grey' />
-              <ClLayout padding='small' paddingDirection='left'>
-                <ClText size='large'>{item.name}</ClText>
-                <ClText size='small' textColor='gray'>{item.description}</ClText>
-              </ClLayout>
+        <ClAnimation type={animate} delay={index / 10}>
+          <ClCard>
+            <ClFlex justify='between' align='center'>
+              <ClFlex align='center'>
+                <ClIcon iconName={icons[index]} color='grey'/>
+                <ClLayout padding='small' paddingDirection='left'>
+                  <ClText size='large'>{item.name}</ClText>
+                  <ClText size='small' textColor='gray'>{item.description}</ClText>
+                </ClLayout>
+              </ClFlex>
+              <ClIcon iconName='roundrightfill' color='blue'/>
             </ClFlex>
-            <ClIcon iconName='roundrightfill' color='blue' />
-          </ClFlex>
-        </ClCard>
+          </ClCard>
+        </ClAnimation>
       </View>
     ))
     const update = (
       <ClLayout padding='xlarge' paddingDirection='bottom' margin='xlarge' marginDirection='bottom'>
         <ClCard type='full'>
-          <ClTimeline times={updateList} />
+          <ClTimeline times={updateList}/>
         </ClCard>
       </ClLayout>
     )
-    const { active } = this.state
     return (
       <View className='index'>
-        {active === 0 ?
-         <ClLayout padding='xlarge' paddingDirection='bottom' margin='xlarge' marginDirection='bottom'>{cards}</ClLayout>
+        {active === 0 && show ?
+         <ClLayout padding='xlarge' paddingDirection='bottom' margin='xlarge'
+                   marginDirection='bottom'>{cards}</ClLayout>
                       : ''
         }
         {active === 1 ? update : ''}

@@ -20,6 +20,9 @@ export default function Radio () {
       <ClCard>
         <ClRadio type='form' title='性别' radioGroup={radioGroup} checkedValue={checkedValue} />
       </ClCard>
+      <ClCard>
+        <ClRadio type='list' title='性别' radioGroup={radioGroup} checkedValue={checkedValue} />
+      </ClCard>
 
       <ClTitleBar title='方向' textColor='blue' type='sub-title' subTitle='direction' subTitleColor='shadow' />
       <ClCard>

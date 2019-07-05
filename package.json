@@ -34,7 +34,7 @@
     "@tarojs/taro-swan": "1.3.4",
     "@tarojs/taro-tt": "1.3.4",
     "@tarojs/taro-weapp": "1.3.4",
-    "mp-colorui": "^0.1.4",
+    "mp-colorui": "^0.1.6",
     "nerv-devtools": "^1.4.0",
     "nervjs": "^1.4.0"
   },
