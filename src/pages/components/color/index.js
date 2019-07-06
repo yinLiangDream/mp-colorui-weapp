@@ -1,50 +1,69 @@
 import Taro from '@tarojs/taro'
-import { Block, View } from '@tarojs/components'
-import { ClCard, ClFlex, ClText, ClTitleBar } from 'mp-colorui'
+import {Block, View} from '@tarojs/components'
+import {ClAnimation, ClCard, ClFlex, ClText, ClTitleBar} from 'mp-colorui'
 
-import {convertLightColor } from '../../../util'
+import {convertLightColor} from '../../../util'
 
 import colors from '../../../constant/color'
 
 export default class Color extends Taro.Component {
-  renderCard (item) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAnimation: false
+    }
+  }
+  renderCard(item, index) {
     return (
-      <ClCard bgColor={item.title.includes('Light') ? convertLightColor(item.title) : item.title}>
-        <ClFlex justify='around'>
-          <ClText>{item.title}</ClText>
-          <ClText special='upper'>{item.color}</ClText>
-        </ClFlex>
-      </ClCard>
+      <ClAnimation type='slide-top' delay={index/10}>
+        <ClCard bgColor={item.title.includes('Light') ? convertLightColor(item.title) : item.title}>
+          <ClFlex justify='around'>
+            <ClText>{item.title}</ClText>
+            <ClText special='upper'>{item.color}</ClText>
+          </ClFlex>
+        </ClCard>
+      </ClAnimation>
     )
   }
 
-  render () {
+  componentDidMount() {
+    let time = null;
+    time = setTimeout(() => {
+      this.setState({
+        showAnimation: true
+      })
+      clearTimeout(time)
+    }, 100)
+  }
+
+  render() {
+    const { showAnimation } = this.state
     const normalColor = colors.normalColor.map(
-      item =>
+      (item, index) =>
         <Block key={item.title}>
-          {this.renderCard(item)}
+          {this.renderCard(item, index)}
         </Block>
     )
     const lightColor = colors.lightColor.map(
-      item =>
+      (item, index) =>
         <Block key={item.title}>
-          {this.renderCard(item)}
+          {this.renderCard(item, index)}
         </Block>
     )
     const gradualColor = colors.gradualColor.map(
-      item =>
+      (item, index) =>
         <Block key={item.title}>
-          {this.renderCard(item)}
+          {this.renderCard(item, index)}
         </Block>
     )
     return (
       <View>
-        <ClTitleBar title='标准色' type='border-title' />
-        {normalColor}
-        <ClTitleBar title='浅色' type='border-title' />
-        {lightColor}
-        <ClTitleBar title='渐变色' type='border-title' />
-        {gradualColor}
+        <ClTitleBar title='标准色' type='icon' textColor={"black"} iconColor={"blue"} />
+        {showAnimation ? normalColor : ''}
+        <ClTitleBar title='浅色' type='icon' textColor={"black"} iconColor={"blue"} />
+        {showAnimation ? lightColor : ''}
+        <ClTitleBar title='渐变色' type='icon' textColor={"black"} iconColor={"blue"} />
+        {showAnimation ? gradualColor : ''}
       </View>
     )
   }

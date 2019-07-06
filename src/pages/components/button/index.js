@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { ClButton, ClCard, ClFlex, ClLayout, ClTitleBar } from 'mp-colorui'
+import {ClButton, ClCard, ClFlex, ClGrid, ClLayout, ClTitleBar} from 'mp-colorui'
 import colors from '../../../constant/color'
 import { convertLightColor } from '../../../util'
 
@@ -17,8 +17,8 @@ export default class ButtonView extends Taro.Component {
           <View style={{ flex: 1 }}>
             <ClCard>
               <ClFlex justify='around'>
-                <ClButton shape='radius' bgColor='light-blue'>默认(radius)</ClButton>
-                <ClButton shape='round' bgColor='light-blue'>圆角(round)</ClButton>
+                <ClButton shape='radius' bgColor='blue'>默认(radius)</ClButton>
+                <ClButton shape='round' bgColor='blue'>圆角(round)</ClButton>
               </ClFlex>
             </ClCard>
           </View>
@@ -29,9 +29,9 @@ export default class ButtonView extends Taro.Component {
           <View style={{ flex: 1 }}>
             <ClCard>
               <ClFlex justify='around' align='center'>
-                <ClButton shape='round' bgColor='light-blue' size='small'>small</ClButton>
-                <ClButton shape='round' bgColor='light-blue' size='normal'>normal</ClButton>
-                <ClButton shape='round' bgColor='light-blue' size='large'>large</ClButton>
+                <ClButton shape='round' bgColor='blue' size='small'>small</ClButton>
+                <ClButton shape='round' bgColor='blue' size='normal'>normal</ClButton>
+                <ClButton shape='round' bgColor='blue' size='large'>large</ClButton>
               </ClFlex>
             </ClCard>
           </View>
@@ -41,56 +41,62 @@ export default class ButtonView extends Taro.Component {
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
-              <ClFlex justify='between' align='center' wrap>
+              <ClGrid col={3}>
                 {
                   colors.normalColor.map((item) => (
-                    <ClLayout key={item.title} padding='small' paddingDirection='around'>
-                      <ClButton shape='round' bgColor={item.title}>{item.title}</ClButton>
-                    </ClLayout>
+                    <View  key={item.title}>
+                      <ClLayout padding='small' paddingDirection='around'>
+                        <ClButton shape='round' bgColor={item.title} long>{item.title}</ClButton>
+                      </ClLayout>
+                    </View>
                   ))
                 }
-              </ClFlex>
+              </ClGrid>
             </ClCard>
             <ClCard>
-              <ClFlex justify='around' align='center' wrap>
+              <ClGrid col={2}>
                 {
                   colors.lightColor.map((item) => (
-                    <ClLayout key={item.title} padding='small' paddingDirection='around'>
-                      <ClButton shape='round' bgColor={convertLightColor(item.title)}>{convertLightColor(item.title)}</ClButton>
-                    </ClLayout>
+                    <View key={item.title}>
+                      <ClLayout padding='small' paddingDirection='around'>
+                        <ClButton long shape='round' bgColor={convertLightColor(item.title)}>{convertLightColor(item.title)}</ClButton>
+                      </ClLayout>
+                    </View>
                   ))
                 }
-              </ClFlex>
+              </ClGrid>
             </ClCard>
             <ClCard>
-              <ClFlex justify='around' align='center' wrap>
+              <ClGrid col={2}>
                 {
                   colors.gradualColor.map((item) => (
-                    <ClLayout key={item.title} padding='small' paddingDirection='around'>
-                      <ClButton shape='round' bgColor={item.title}>{item.title}</ClButton>
-                    </ClLayout>
+                    <View key={item.title} >
+                      <ClLayout padding='small' paddingDirection='around'>
+                        <ClButton shape='round' long bgColor={item.title}>{item.title}</ClButton>
+                      </ClLayout>
+                    </View>
                   ))
                 }
-              </ClFlex>
+              </ClGrid>
             </ClCard>
           </View>
         </ClFlex>
 
         <ClTitleBar title='按钮镂空' textColor='blue' type='sub-title' subTitle='plain' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
-          <View style={{ flex: 1 }}>
             <ClCard>
-              <ClFlex justify='between' align='center' wrap>
+              <ClGrid col={2}>
                 {
-                  colors.normalColor.map((item) => (
-                    <ClLayout key={item.title} padding='small' paddingDirection='around'>
-                      <ClButton plain shape='round' bgColor={item.title}>{item.title}</ClButton>
-                    </ClLayout>
+                  colors.normalColor.filter(item => item.title !== 'white').map((item) => (
+                    <View>
+                      <ClLayout key={item.title} padding='small' paddingDirection='around'>
+                        <ClButton long plain shape='round' bgColor={item.title}>{item.title}</ClButton>
+                      </ClLayout>
+                    </View>
                   ))
                 }
-              </ClFlex>
+              </ClGrid>
             </ClCard>
-          </View>
         </ClFlex>
 
         <ClTitleBar title='块状按钮' textColor='blue' type='sub-title' subTitle='long' subTitleColor='shadow' />
