@@ -88,8 +88,8 @@ export default class ButtonView extends Taro.Component {
               <ClGrid col={2}>
                 {
                   colors.normalColor.filter(item => item.title !== 'white').map((item) => (
-                    <View>
-                      <ClLayout key={item.title} padding='small' paddingDirection='around'>
+                    <View key={item.title}>
+                      <ClLayout padding='small' paddingDirection='around'>
                         <ClButton long plain shape='round' bgColor={item.title}>{item.title}</ClButton>
                       </ClLayout>
                     </View>
