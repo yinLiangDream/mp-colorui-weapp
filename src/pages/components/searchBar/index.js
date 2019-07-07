@@ -16,7 +16,7 @@ export default class SearchBar extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='形状&背景色' textColor='blue' type='sub-title' subTitle='shape&bgColor' subTitleColor='shadow' />
+        <ClTitleBar title='形状&背景色' textColor='blue' type='icon' subTitle='shape&bgColor' subTitleColor='shadow' />
         <ClCard>
           <ClSearchBar shape='radius' bgColor='grey' onSearch={value => {
             this.onSearch(value)
@@ -30,7 +30,7 @@ export default class SearchBar extends Taro.Component {
           />
         </ClCard>
 
-        <ClTitleBar title='占位符' textColor='blue' type='sub-title' subTitle='placeholder' subTitleColor='shadow' />
+        <ClTitleBar title='占位符' textColor='blue' type='icon' subTitle='placeholder' subTitleColor='shadow' />
         <ClCard>
           <ClSearchBar shape='round' placeholder='请输入你想输入的内容' onSearch={value => {
             this.onSearch(value)
@@ -41,7 +41,7 @@ export default class SearchBar extends Taro.Component {
         <ClTitleBar
           title='功能组&按钮颜色'
           textColor='blue'
-          type='sub-title'
+          type='icon'
           subTitle='leftIcons&rightButtonColor'
           subTitleColor='shadow'
         />

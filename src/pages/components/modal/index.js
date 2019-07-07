@@ -7,7 +7,7 @@ export default function Modal () {
   const [custom, setCustom] = useState(false)
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
       <ClCard>
         <ClButton text='普通' long onClick={() => {
           setNormal(true)
@@ -31,7 +31,7 @@ export default function Modal () {
         }}
       >我是内容</ClModal>
 
-      <ClTitleBar title='自定义' textColor='blue' type='sub-title' subTitle='custom' subTitleColor='shadow' />
+      <ClTitleBar title='自定义' textColor='blue' type='icon' subTitle='custom' subTitleColor='shadow' />
       <ClCard>
         <ClButton text='自定义' bgColor='light-cyan' long onClick={() => {
           setCustom(true)
@@ -43,7 +43,7 @@ export default function Modal () {
         closeWithShadow
         custom
         close
-        renderTitle={<ClTitleBar title='我是自定义的标题' textColor='blue' type='sub-title' subTitle='custom'
+        renderTitle={<ClTitleBar title='我是自定义的标题' textColor='blue' type='icon' subTitle='custom'
           subTitleColor='shadow'
         />}
         onCancel={() => {

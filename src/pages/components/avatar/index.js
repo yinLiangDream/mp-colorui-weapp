@@ -25,7 +25,7 @@ export default class Avatar extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='形状' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='shape' />
+        <ClTitleBar title='形状' textColor='blue' subTitleColor='shadow' type='icon' subTitle='shape' />
         <ClCard>
           <ClFlex justify='around' align='center'>
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='radius' />
@@ -33,7 +33,7 @@ export default class Avatar extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='大小' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='size' />
+        <ClTitleBar title='大小' textColor='blue' subTitleColor='shadow' type='icon' subTitle='size' />
         <ClCard>
           <ClFlex justify='around' align='center'>
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='round' size='small' />
@@ -43,7 +43,7 @@ export default class Avatar extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='阴影' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='shadow' />
+        <ClTitleBar title='阴影' textColor='blue' subTitleColor='shadow' type='icon' subTitle='shadow' />
         <ClCard>
           <ClFlex justify='around' align='center'>
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='round' size='small' shadow />
@@ -53,7 +53,7 @@ export default class Avatar extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='类型' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='type' />
+        <ClTitleBar title='类型' textColor='blue' subTitleColor='shadow' type='icon' subTitle='type' />
         <ClCard>
           <ClFlex justify='around' align='center'>
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='round' size='normal' shadow />
@@ -63,7 +63,7 @@ export default class Avatar extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='头像组' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='array' />
+        <ClTitleBar title='头像组' textColor='blue' subTitleColor='shadow' type='icon' subTitle='array' />
         <ClCard>
           <ClFlex justify='around' align='center'>
             <ClAvatar headerArray={headerArray} shape='round' size='normal' shadow />

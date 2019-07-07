@@ -66,7 +66,7 @@ export default class ShopBar extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='背景色' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='bgColor' />
+        <ClTitleBar title='背景色' textColor='blue' subTitleColor='shadow' type='icon' subTitle='bgColor' />
         <ClCard>
           <ClShopBar onClickTab={(index) => {this.clickIcon(index)}}
             onClickButton={(index) => {this.clickButton(index)}} bgColor='gray' tabs={tabs} buttons={buttons}
@@ -85,7 +85,7 @@ export default class ShopBar extends Taro.Component {
           />
         </ClCard>
 
-        <ClTitleBar title='分割线' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='border' />
+        <ClTitleBar title='分割线' textColor='blue' subTitleColor='shadow' type='icon' subTitle='border' />
         <ClCard>
           <ClShopBar onClickTab={(index) => {this.clickIcon(index)}}
             onClickButton={(index) => {this.clickButton(index)}} bgColor='gray' tabs={tabs} border
@@ -93,7 +93,7 @@ export default class ShopBar extends Taro.Component {
           />
         </ClCard>
 
-        <ClTitleBar title='角标' textColor='blue' subTitleColor='shadow' type='sub-title' subTitle='badge' />
+        <ClTitleBar title='角标' textColor='blue' subTitleColor='shadow' type='icon' subTitle='badge' />
         <ClCard>
           <ClShopBar onClickTab={(index) => {this.clickIcon(index)}}
             onClickButton={(index) => {this.clickButton(index)}} bgColor='gray' tabs={tabsBorder} border

@@ -1,18 +1,29 @@
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import {ClButton, ClCard, ClFlex, ClGrid, ClLayout, ClTitleBar} from 'mp-colorui'
+import { ClButton, ClCard, ClFlex, ClGrid, ClLayout, ClSwitch, ClTitleBar } from 'mp-colorui'
 import colors from '../../../constant/color'
 import { convertLightColor } from '../../../util'
 
 export default class ButtonView extends Taro.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showLines: false
+    }
+  }
   config = {
     navigationBarTitleText: 'Button 按钮'
   }
 
   render () {
+    const {showLines} = this.state;
+    const renderRight = <ClSwitch onChange={(value) => {this.setState({
+      showLines: value
+    })}}
+    />
     return (
       <ClLayout>
-        <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='shadow' />
+        <ClTitleBar title='形状' textColor='blue' type='icon' subTitle='shape' subTitleColor='shadow' />
         <ClFlex justify='around' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -24,7 +35,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='尺寸' textColor='blue' type='sub-title' subTitle='size' subTitleColor='shadow' />
+        <ClTitleBar title='尺寸' textColor='blue' type='icon' subTitle='size' subTitleColor='shadow' />
         <ClFlex justify='around' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -37,7 +48,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='按钮颜色' textColor='blue' type='sub-title' subTitle='bgColor' subTitleColor='shadow' />
+        <ClTitleBar title='按钮颜色' textColor='blue' type='icon' subTitle='bgColor' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -82,7 +93,7 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='按钮镂空' textColor='blue' type='sub-title' subTitle='plain' subTitleColor='shadow' />
+        <ClTitleBar title='按钮镂空' textColor='blue' type='icon' subTitle='plain' subTitleColor='shadow' renderRight={renderRight} />
         <ClFlex justify='between' wrap>
             <ClCard>
               <ClGrid col={2}>
@@ -90,7 +101,7 @@ export default class ButtonView extends Taro.Component {
                   colors.normalColor.filter(item => item.title !== 'white').map((item) => (
                     <View key={item.title}>
                       <ClLayout padding='small' paddingDirection='around'>
-                        <ClButton long plain shape='round' bgColor={item.title}>{item.title}</ClButton>
+                        <ClButton long plain plainSize={showLines ? 'bold' : 'default'} shape='round' bgColor={item.title}>{item.title}</ClButton>
                       </ClLayout>
                     </View>
                   ))
@@ -99,7 +110,7 @@ export default class ButtonView extends Taro.Component {
             </ClCard>
         </ClFlex>
 
-        <ClTitleBar title='块状按钮' textColor='blue' type='sub-title' subTitle='long' subTitleColor='shadow' />
+        <ClTitleBar title='块状按钮' textColor='blue' type='icon' subTitle='long' subTitleColor='shadow' />
         <ClFlex justify='between' wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -108,12 +119,12 @@ export default class ButtonView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='失效按钮' textColor='blue' type='sub-title' subTitle='disabled' subTitleColor='shadow' />
+        <ClTitleBar title='失效按钮' textColor='blue' type='icon' subTitle='disabled' subTitleColor='shadow' />
         <ClCard>
           <ClButton shape='round' bgColor='blue' long disabled>禁止按钮</ClButton>
         </ClCard>
 
-        <ClTitleBar title='加载中' textColor='blue' type='sub-title' subTitle='loading' subTitleColor='shadow' />
+        <ClTitleBar title='加载中' textColor='blue' type='icon' subTitle='loading' subTitleColor='shadow' />
         <ClCard>
           <ClButton shape='round' bgColor='blue' long loading>加载中</ClButton>
         </ClCard>

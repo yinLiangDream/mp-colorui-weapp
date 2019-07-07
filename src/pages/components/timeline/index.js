@@ -8,7 +8,7 @@ export default class Timeline extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='时间轴' textColor='blue' type='sub-title' subTitle='timeline' subTitleColor='shadow' />
+        <ClTitleBar title='时间轴' textColor='blue' type='icon' subTitle='timeline' subTitleColor='shadow' />
         <ClTimeline times={[
           {
             content: ['我是内容，默认背景']

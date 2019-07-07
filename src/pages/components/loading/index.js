@@ -10,7 +10,7 @@ export default function Loading () {
   const [imageLoading, setImageLoading] = useState(false)
   return (
     <ClLayout>
-      <ClTitleBar title='bar加载' textColor='blue' type='sub-title' subTitle='bar' subTitleColor='shadow' />
+      <ClTitleBar title='bar加载' textColor='blue' type='icon' subTitle='bar' subTitleColor='shadow' />
       <ClCard>
         <ClSwitch title='bar加载' type='form' checked={barLoading} onChange={(flag) => {
           setBarLoading(flag)
@@ -19,7 +19,7 @@ export default function Loading () {
       </ClCard>
       <ClLoading type='bar' show={barLoading} />
 
-      <ClTitleBar title='line加载' textColor='blue' type='sub-title' subTitle='line' subTitleColor='shadow' />
+      <ClTitleBar title='line加载' textColor='blue' type='icon' subTitle='line' subTitleColor='shadow' />
       <ClLoading type='line' show={lineLoading} loadingError={lineLoadingErr} noMore={lineLoadingEnd} />
 
       <ClCard>
@@ -43,7 +43,7 @@ export default function Loading () {
         />
       </ClCard>
 
-      <ClTitleBar title='modal加载' textColor='blue' type='sub-title' subTitle='modal' subTitleColor='shadow' />
+      <ClTitleBar title='modal加载' textColor='blue' type='icon' subTitle='modal' subTitleColor='shadow' />
       <ClLoading type='modal'  show={modalLoading} imgUrl='https://mp-yys-1255362963.cos.ap-chengdu.myqcloud.com/loading.gif' />
       <ClCard>
         <ClSwitch title='modal加载' type='form' checked={modalLoading} onChange={(flag) => {
@@ -55,7 +55,7 @@ export default function Loading () {
         />
       </ClCard>
 
-      <ClTitleBar title='image加载' textColor='blue' type='sub-title' subTitle='image' subTitleColor='shadow' />
+      <ClTitleBar title='image加载' textColor='blue' type='icon' subTitle='image' subTitleColor='shadow' />
       <ClLoading type='image'  show={imageLoading} imgUrl='https://mp-yys-1255362963.cos.ap-chengdu.myqcloud.com/loading.gif' />
       <ClCard>
         <ClSwitch title='image加载' type='form' checked={imageLoading} onChange={(flag) => {

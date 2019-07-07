@@ -4,7 +4,7 @@ import { ClCard, ClLayout, ClTitleBar } from 'mp-colorui'
 export default function Card() {
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
       <ClCard>我是卡片形式</ClCard>
       <ClCard type='full'>我是铺满形式</ClCard>
       <ClCard bgColor='brown'>我可以设置背景色</ClCard>

@@ -4,7 +4,7 @@ import { ClCard, ClLayout, ClProgress, ClTitleBar } from 'mp-colorui'
 export default function Progress() {
   return (
     <ClLayout>
-      <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='shadow' />
+      <ClTitleBar title='形状' textColor='blue' type='icon' subTitle='shape' subTitleColor='shadow' />
       <ClCard>
         <ClProgress shape='normal' percent={10} />
       </ClCard>
@@ -16,7 +16,7 @@ export default function Progress() {
       </ClCard>
 
 
-      <ClTitleBar title='背景色' textColor='blue' type='sub-title' subTitle='bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='背景色' textColor='blue' type='icon' subTitle='bgColor' subTitleColor='shadow' />
       <ClCard>
         <ClProgress shape='round' percent={20} bgColor='cyan' />
       </ClCard>
@@ -27,7 +27,7 @@ export default function Progress() {
         <ClProgress shape='round' percent={80} bgColor='gradualBlue' />
       </ClCard>
 
-      <ClTitleBar title='纹理' textColor='blue' type='sub-title' subTitle='stripe' subTitleColor='shadow' />
+      <ClTitleBar title='纹理' textColor='blue' type='icon' subTitle='stripe' subTitleColor='shadow' />
       <ClCard>
         <ClProgress shape='round' stripe percent={20} bgColor='cyan' />
       </ClCard>
@@ -35,7 +35,7 @@ export default function Progress() {
         <ClProgress shape='round' stripe percent={40} bgColor='light-cyan' />
       </ClCard>
 
-      <ClTitleBar title='动画' textColor='blue' type='sub-title' subTitle='animation' subTitleColor='shadow' />
+      <ClTitleBar title='动画' textColor='blue' type='icon' subTitle='animation' subTitleColor='shadow' />
       <ClCard>
         <ClProgress animation shape='round' stripe percent={20} bgColor='cyan' />
       </ClCard>
@@ -43,7 +43,7 @@ export default function Progress() {
         <ClProgress animation shape='round' stripe percent={40} bgColor='light-cyan' />
       </ClCard>
 
-      <ClTitleBar title='大小' textColor='blue' type='sub-title' subTitle='size' subTitleColor='shadow' />
+      <ClTitleBar title='大小' textColor='blue' type='icon' subTitle='size' subTitleColor='shadow' />
       <ClCard>
         <ClProgress shape='round' size='xsmall' percent={20} bgColor='cyan' />
       </ClCard>

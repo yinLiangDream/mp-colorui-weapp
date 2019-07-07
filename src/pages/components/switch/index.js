@@ -4,7 +4,7 @@ import { ClCard, ClLayout, ClSwitch, ClTitleBar } from 'mp-colorui'
 export default function Switch() {
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
       <ClCard>
         <ClSwitch type='normal' />
       </ClCard>
@@ -12,7 +12,7 @@ export default function Switch() {
         <ClSwitch type='form' title={'~\(≧▽≦)/~啦啦啦'} />
       </ClCard>
 
-      <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='shadow' />
+      <ClTitleBar title='形状' textColor='blue' type='icon' subTitle='shape' subTitleColor='shadow' />
       <ClCard>
         <ClSwitch type='form' title={'~\(≧▽≦)/~啦啦啦'} shape='normal' />
       </ClCard>
@@ -20,7 +20,7 @@ export default function Switch() {
         <ClSwitch type='form' title={'~\(≧▽≦)/~啦啦啦'} shape='radius' />
       </ClCard>
 
-      <ClTitleBar title='颜色' textColor='blue' type='sub-title' subTitle='color' subTitleColor='shadow' />
+      <ClTitleBar title='颜色' textColor='blue' type='icon' subTitle='color' subTitleColor='shadow' />
       <ClCard>
         <ClSwitch type='form' title={'~\(≧▽≦)/~啦啦啦'} shape='normal' color='cyan' />
       </ClCard>

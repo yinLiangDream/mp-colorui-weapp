@@ -7,7 +7,7 @@ export default function Drawer() {
   const [bottom, setBottom] = useState(false)
   return (
     <ClLayout>
-      <ClTitleBar title='方向' textColor='blue' type='sub-title' subTitle='direction' subTitleColor='shadow' />
+      <ClTitleBar title='方向' textColor='blue' type='icon' subTitle='direction' subTitleColor='shadow' />
       <ClCard>
         <ClButton long onClick={() => {
           setLeft(true)

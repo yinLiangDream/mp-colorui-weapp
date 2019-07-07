@@ -17,7 +17,7 @@ const checkboxGroup = [
 export default function Checkbox() {
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
       <ClCard>
         <ClCheckbox type='normal' checkboxGroup={checkboxGroup} />
       </ClCard>
@@ -25,7 +25,7 @@ export default function Checkbox() {
         <ClCheckbox title='选一个' type='form' checkboxGroup={checkboxGroup} />
       </ClCard>
 
-      <ClTitleBar title='方向' textColor='blue' type='sub-title' subTitle='direction' subTitleColor='shadow' />
+      <ClTitleBar title='方向' textColor='blue' type='icon' subTitle='direction' subTitleColor='shadow' />
       <ClCard>
         <ClCheckbox type='normal' checkboxGroup={checkboxGroup} direction='horizontal' />
       </ClCard>
@@ -33,7 +33,7 @@ export default function Checkbox() {
         <ClCheckbox title='选一个' type='form' checkboxGroup={checkboxGroup} direction='horizontal' />
       </ClCard>
 
-      <ClTitleBar title='颜色' textColor='blue' type='sub-title' subTitle='color' subTitleColor='shadow' />
+      <ClTitleBar title='颜色' textColor='blue' type='icon' subTitle='color' subTitleColor='shadow' />
       <ClCard>
         <ClCheckbox type='normal' checkboxGroup={checkboxGroup} color='red' direction='horizontal' />
       </ClCard>
@@ -41,7 +41,7 @@ export default function Checkbox() {
         <ClCheckbox title='选一个' type='form' checkboxGroup={checkboxGroup} color='yellow' direction='horizontal' />
       </ClCard>
 
-      <ClTitleBar title='形状' textColor='blue' type='sub-title' subTitle='shape' subTitleColor='shadow' />
+      <ClTitleBar title='形状' textColor='blue' type='icon' subTitle='shape' subTitleColor='shadow' />
       <ClCard>
         <ClCheckbox shape='normal' type='normal' checkboxGroup={checkboxGroup} color='red' direction='horizontal' />
       </ClCard>

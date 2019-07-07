@@ -24,11 +24,11 @@ export default class SwiperView extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+        <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
         <ClSwiper type='card' list={this.state.list} circular />
         <ClSwiper type='screen' list={this.state.list} circular />
 
-        <ClTitleBar title='指示点' textColor='blue' type='sub-title' subTitle='dot' subTitleColor='shadow' />
+        <ClTitleBar title='指示点' textColor='blue' type='icon' subTitle='dot' subTitleColor='shadow' />
         <ClSwiper
           type='screen'
           list={this.state.list}

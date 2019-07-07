@@ -27,7 +27,7 @@ const arrowMenu = [
 export default function MenuList() {
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='blue' type='sub-title' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='blue' type='icon' subTitle='type' subTitleColor='shadow' />
       <ClLayout margin='normal' marginDirection='vertical'>
         <ClMenuList card list={typeMenu} />
       </ClLayout>
@@ -35,7 +35,7 @@ export default function MenuList() {
         <ClMenuList list={typeMenu} />
       </ClLayout>
 
-      <ClTitleBar title='图标&箭头' textColor='blue' type='sub-title' subTitle='icon&arrow' subTitleColor='shadow' />
+      <ClTitleBar title='图标&箭头' textColor='blue' type='icon' subTitle='icon&arrow' subTitleColor='shadow' />
       <ClLayout margin='normal' marginDirection='vertical'>
         <ClMenuList card list={arrowMenu} />
       </ClLayout>

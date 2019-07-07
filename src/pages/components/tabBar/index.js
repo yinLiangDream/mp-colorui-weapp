@@ -55,7 +55,7 @@ const actionTabs = JSON.parse(JSON.stringify(defaultTabs)).map((item, index) => 
 export default function TabBar() {
   return (
     <ClLayout>
-      <ClTitleBar title='默认' textColor='blue' type='sub-title' subTitle='default' subTitleColor='shadow' />
+      <ClTitleBar title='默认' textColor='blue' type='icon' subTitle='default' subTitleColor='shadow' />
       <ClCard>
         <ClTabBar
           active={1}
@@ -63,7 +63,7 @@ export default function TabBar() {
         />
       </ClCard>
 
-      <ClTitleBar title='背景色' textColor='blue' type='sub-title' subTitle='bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='背景色' textColor='blue' type='icon' subTitle='bgColor' subTitleColor='shadow' />
       <ClCard>
         <ClTabBar
           active={1}
@@ -72,7 +72,7 @@ export default function TabBar() {
         />
       </ClCard>
 
-      <ClTitleBar title='激活色' textColor='blue' type='sub-title' subTitle='activeColor' subTitleColor='shadow' />
+      <ClTitleBar title='激活色' textColor='blue' type='icon' subTitle='activeColor' subTitleColor='shadow' />
       <ClCard>
         <ClTabBar
           active={1}
@@ -82,7 +82,7 @@ export default function TabBar() {
         />
       </ClCard>
 
-      <ClTitleBar title='突出' textColor='blue' type='sub-title' subTitle='action' subTitleColor='shadow' />
+      <ClTitleBar title='突出' textColor='blue' type='icon' subTitle='action' subTitleColor='shadow' />
       <ClCard>
         <ClTabBar
           active={1}

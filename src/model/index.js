@@ -1,8 +1,21 @@
 export const updateList = [
   {
+    title: '0.1.7',
+    time: '2019-07-07',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'API',
+      '- 新增 titleBar 组件 renderRight 属性',
+      'BUG',
+      '- 解决 浅色 light-pink 失效问题'
+    ]
+  },
+  {
     title: '0.1.6',
     time: '2019-07-05',
-    bgColor: 'light-grey',
+    iconColor: 'grey',
+    bgColor: 'grey',
     content: [
       'API',
       '- 新增 MenuList list 下 disabled 属性',
@@ -13,7 +26,8 @@ export const updateList = [
   {
     title: '0.1.5',
     time: '2019-07-05',
-    bgColor: 'light-grey',
+    iconColor: 'grey',
+    bgColor: 'grey',
     content: [
       'API',
       '- 新增 Radio 组件 type 属性下的 list 属性'
@@ -21,8 +35,9 @@ export const updateList = [
   },
   {
     title: '0.1.4',
+    iconColor: 'grey',
     time: '2019-07-04',
-    bgColor: 'light-grey',
+    bgColor: 'grey',
     content: [
       'COMPONENT',
       '- 新增 Animation 动画组件',
@@ -34,8 +49,9 @@ export const updateList = [
   },
   {
     title: '0.1.3',
+    iconColor: 'grey',
     time: '2019-07-02',
-    bgColor: 'light-grey',
+    bgColor: 'grey',
     content: [
       'BUG',
       '- 修复 H5 Button 无动效问题',
@@ -46,14 +62,16 @@ export const updateList = [
   },
   {
     title: '0.1.1',
+    iconColor: 'grey',
     time: '2019-07-01',
-    bgColor: 'light-grey',
+    bgColor: 'grey',
     content: ['BUG', '- 修复 H5 适配的部分问题', '- 修复 H5 Radio 样式问题']
   },
   {
     title: '0.1.0',
+    iconColor: 'grey',
     time: '2019-06-25',
-    bgColor: 'light-grey',
+    bgColor: 'grey',
     content: ['FATURE', '- MP ColorUI 测试版上线']
   }
 ]
