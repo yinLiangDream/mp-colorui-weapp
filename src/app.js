@@ -59,7 +59,8 @@ class App extends Component {
       'pages/components/navBar/index',
       'pages/components/tabBar/index',
       'pages/components/tabs/index',
-      'pages/components/animation/index'
+      'pages/components/animation/index',
+      'pages/components/verticalTab/index'
     ],
     window: {
       backgroundTextStyle: 'light',

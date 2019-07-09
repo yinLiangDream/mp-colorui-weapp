@@ -1,5 +1,15 @@
 export const updateList = [
   {
+    title: '0.2.0',
+    time: '2019-07-09',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'COMPONENT',
+      '- 新增 ClVertivalTab, ClVerticalTabCell 组件'
+    ]
+  },
+  {
     title: '0.1.7',
     time: '2019-07-07',
     bgColor: 'grey',

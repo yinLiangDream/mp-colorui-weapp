@@ -143,5 +143,8 @@ export const navigateList = [
   }, {
     key: 'tabs',
     name: 'Tabs 标签页'
+  }, {
+    key: 'verticalTab',
+    name: 'VerticalTab 垂直导航'
   }
 ]
