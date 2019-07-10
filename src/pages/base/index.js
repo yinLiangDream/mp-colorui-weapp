@@ -8,7 +8,7 @@ import { baseList } from '../../constant/menu'
 export default function Base () {
   return (
     <View>
-      <ClTitleBar title='基础' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='基础' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={baseList} />
       </ClLayout>

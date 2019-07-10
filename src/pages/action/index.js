@@ -7,7 +7,7 @@ import { actionList } from '../../constant/menu'
 export default function Action() {
   return (
     <View>
-      <ClTitleBar title='操作反馈' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='操作反馈' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={actionList} />
       </ClLayout>

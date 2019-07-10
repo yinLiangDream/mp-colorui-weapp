@@ -7,7 +7,7 @@ import { viewList } from '../../constant/menu'
 export default function ViewFunc() {
   return (
     <View>
-      <ClTitleBar title='视图' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='视图' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={viewList} />
       </ClLayout>

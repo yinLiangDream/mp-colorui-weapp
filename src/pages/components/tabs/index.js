@@ -1,55 +1,121 @@
 import Taro from '@tarojs/taro'
 import { ClCard, ClLayout, ClTabs, ClTitleBar } from 'mp-colorui'
+import { View } from '@tarojs/components'
 
 function gen (item, index) {
     return  {
-      text: `标签 ${index + 1}`
+      text: `标签 ${index + 1}`,
+      id: `id-${index}`
     }
 }
 
 const defaultTabs = [...new Array(10)].map(gen)
 
-const verbTabs = [...new Array(3)].map(gen)
+const verbTabs = [
+  {
+    text: '标签 1',
+    id: 'verb-1'
+  }, {
+    text: '标签 2',
+    id: 'verb-2'
+  }, {
+    text: '标签 3',
+    id: 'verb-3'
+  }
+]
 
 const iconTabs = [
   {
     text: '标签 1',
-    icon: 'emoji'
+    icon: 'emoji',
+    id: 'icon-1'
   }, {
     text: '标签 2',
-    icon: 'addressbook'
+    icon: 'addressbook',
+    id: 'icon-2'
   }, {
     text: '标签 3',
-    icon: 'discoverfill'
+    icon: 'discoverfill',
+    id: 'icon-3'
   }
 ]
 
 export default function Tabs() {
   return (
     <ClLayout>
-      <ClTitleBar title='默认' textColor='blue' type='icon' subTitle='default' subTitleColor='shadow' />
+      <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
       <ClCard>
-        <ClTabs tabs={defaultTabs} />
+        <ClTabs tabs={defaultTabs}>
+          {
+            defaultTabs.map(item => (
+              <View key={item.id} id={item.id}>
+                {item.text}
+              </View>
+            ))
+          }
+        </ClTabs>
+      </ClCard>
+      <ClTitleBar title='可拖动' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
+      <ClCard>
+        <ClTabs tabs={defaultTabs} touchMove>
+          {
+            defaultTabs.map(item => (
+              <View key={item.id} id={item.id}>
+                {item.text}
+              </View>
+            ))
+          }
+        </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='平分' textColor='blue' type='icon' subTitle='verb' subTitleColor='shadow' />
+      <ClTitleBar title='平分' textColor='black' type='icon' subTitle='verb' subTitleColor='shadow' />
       <ClCard>
-        <ClTabs tabs={verbTabs} type='verb' />
+        <ClTabs tabs={verbTabs} type='verb'>
+          {
+            verbTabs.map(item => (
+              <View key={item.id} id={item.id}>{item.text}</View>
+            ))
+          }
+        </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='居中' textColor='blue' type='icon' subTitle='center' subTitleColor='shadow' />
+      <ClTitleBar title='居中' textColor='black' type='icon' subTitle='center' subTitleColor='shadow' />
       <ClCard>
-        <ClTabs tabs={verbTabs} type='center' />
+        <ClTabs tabs={verbTabs.map(item => ({
+          text: item.text,
+          id: item.id + '-1'
+        }))} type='center'>
+          {
+            verbTabs.map(item => (
+              <View key={item.id} id={item.id + '-1'}>{item.text}</View>
+            ))
+          }
+        </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='激活色&背景色' textColor='blue' type='icon' subTitle='activeColor&bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='激活色&背景色' textColor='black' type='icon' subTitle='activeColor&bgColor' subTitleColor='shadow' />
       <ClCard>
-        <ClTabs tabs={verbTabs} type='center' activeColor='red' bgColor='black'  />
+        <ClTabs tabs={verbTabs.map(item => ({
+          text: item.text,
+          id: item.id + '-2'
+        }))} type='center' activeColor='red' bgColor='black' >
+          {
+            verbTabs.map(item => (
+              <View key={item.id} id={item.id + '-2'}>{item.text}</View>
+            ))
+          }
+        </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='带图标' textColor='blue' type='icon' subTitle='icon' subTitleColor='shadow' />
+      <ClTitleBar title='带图标' textColor='black' type='icon' subTitle='icon' subTitleColor='shadow' />
       <ClCard>
-        <ClTabs tabs={iconTabs} type='center' />
+        <ClTabs tabs={iconTabs} type='center'>
+          {
+            iconTabs.map(item => (
+              <View key={item.id} id={item.id}>{item.text}</View>
+            ))
+          }
+        </ClTabs>
       </ClCard>
     </ClLayout>
   )

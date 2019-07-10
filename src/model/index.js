@@ -1,5 +1,24 @@
 export const updateList = [
   {
+    title: '0.2.1',
+    time: '2019-07-11',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'API',
+      '- Animation 组件',
+      '- - 新增 onAnimationStart、onAnimationEnd 事件',
+      '- Tabs 组件',
+      '- - 新增 tabs 属性下的 id 属性',
+      '- - 新增 touchMove 可滑动属性',
+      '- VerticalTab 组件',
+      '- - 新增 backTop 属性',
+      'BUG',
+      '- Card 组件',
+      '- - 修复插入 children 内容时的异常提醒（不影响使用）'
+    ]
+  },
+  {
     title: '0.2.0',
     time: '2019-07-09',
     bgColor: 'grey',

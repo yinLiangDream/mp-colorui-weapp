@@ -7,7 +7,7 @@ import { formList } from '../../constant/menu'
 export default function Form() {
   return (
     <View>
-      <ClTitleBar title='表单' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='表单' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={formList} />
       </ClLayout>

@@ -22,7 +22,7 @@ export default class Tag extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='形状' textColor='blue' type='icon' subTitle='shape' subTitleColor='shadow' />
+        <ClTitleBar title='形状' textColor='black' type='icon' subTitle='shape' subTitleColor='shadow' />
         <ClCard>
           <ClFlex justify='between'>
             <ClTag tags={tags.slice(0, 1)} shape='radius' />
@@ -31,7 +31,7 @@ export default class Tag extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='大小' textColor='blue' type='icon' subTitle='size' subTitleColor='shadow' />
+        <ClTitleBar title='大小' textColor='black' type='icon' subTitle='size' subTitleColor='shadow' />
         <ClCard>
           <ClFlex justify='around'>
             <ClTag tags={tags.slice(0, 1)} shape='radius' size='small' />
@@ -39,7 +39,7 @@ export default class Tag extends Taro.Component {
           </ClFlex>
         </ClCard>
 
-        <ClTitleBar title='Tag 数组' textColor='blue' type='icon' subTitle='array' subTitleColor='shadow' />
+        <ClTitleBar title='Tag 数组' textColor='black' type='icon' subTitle='array' subTitleColor='shadow' />
         <ClCard>
           <ClLayout padding='normal' paddingDirection='bottom'>
             <ClFlex justify='center'>

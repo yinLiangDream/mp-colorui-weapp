@@ -8,7 +8,7 @@ import { navigateList } from '../../constant/menu'
 export default function Navigate() {
   return (
     <View>
-      <ClTitleBar title='导航' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='导航' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={navigateList} />
       </ClLayout>

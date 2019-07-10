@@ -7,7 +7,7 @@ import { layoutList } from '../../constant/menu'
 export default function Layout() {
   return (
     <View>
-      <ClTitleBar title='布局' type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title='布局' type='border-title' textColor='black' borderColor='blue' />
       <ClLayout padding='normal' paddingDirection='around'>
         <MenuNavigate list={layoutList} />
       </ClLayout>

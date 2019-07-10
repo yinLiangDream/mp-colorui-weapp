@@ -38,7 +38,7 @@ export default function Icon () {
         setFilterIcon(icons.filter(item => item.name.includes(value)))
       }} bgColor='white' placeholder='请输入图标关键字'
       />
-      <ClTitleBar title={title} type='border-title' textColor='blue' borderColor='blue' />
+      <ClTitleBar title={title} type='border-title' textColor='black' borderColor='blue' />
       <ClFlex wrap justify='around' align='start'>
         {showAnimation ? filterComponent : ''}
       </ClFlex>
