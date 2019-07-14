@@ -130,6 +130,9 @@ export const layoutList = [
   }, {
     key: 'screenDrawer',
     name: 'ScreenDrawer 全屏抽屉'
+  }, {
+    key: 'accordion',
+    name: 'Accordion 手风琴'
   }
 ]
 

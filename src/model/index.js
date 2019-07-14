@@ -1,5 +1,15 @@
 export const updateList = [
   {
+    title: '0.2.2',
+    time: '2019-07-13',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'COMPONENT',
+      '- 新增 Accordion 手风琴组件'
+    ]
+  },
+  {
     title: '0.2.1',
     time: '2019-07-11',
     bgColor: 'grey',
