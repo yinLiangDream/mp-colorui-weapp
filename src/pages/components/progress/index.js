@@ -18,40 +18,40 @@ export default function Progress() {
 
       <ClTitleBar title='背景色' textColor='black' type='icon' subTitle='bgColor' subTitleColor='shadow' />
       <ClCard>
-        <ClProgress shape='round' percent={20} bgColor='cyan' />
+        <ClProgress shape='round' percent={20} bgColor='red' />
       </ClCard>
       <ClCard>
-        <ClProgress shape='round' percent={40} bgColor='light-cyan' />
+        <ClProgress shape='round' percent={40} bgColor='light-red' />
       </ClCard>
       <ClCard>
-        <ClProgress shape='round' percent={80} bgColor='gradualBlue' />
+        <ClProgress shape='round' percent={80} bgColor='gradualRed' />
       </ClCard>
 
       <ClTitleBar title='纹理' textColor='black' type='icon' subTitle='stripe' subTitleColor='shadow' />
       <ClCard>
-        <ClProgress shape='round' stripe percent={20} bgColor='cyan' />
+        <ClProgress shape='round' stripe percent={20} bgColor='red' />
       </ClCard>
       <ClCard>
-        <ClProgress shape='round' stripe percent={40} bgColor='light-cyan' />
+        <ClProgress shape='round' stripe percent={40} bgColor='light-red' />
       </ClCard>
 
       <ClTitleBar title='动画' textColor='black' type='icon' subTitle='animation' subTitleColor='shadow' />
       <ClCard>
-        <ClProgress animation shape='round' stripe percent={20} bgColor='cyan' />
+        <ClProgress animation shape='round' stripe percent={20} bgColor='red' />
       </ClCard>
       <ClCard>
-        <ClProgress animation shape='round' stripe percent={40} bgColor='light-cyan' />
+        <ClProgress animation shape='round' stripe percent={40} bgColor='light-red' />
       </ClCard>
 
       <ClTitleBar title='大小' textColor='black' type='icon' subTitle='size' subTitleColor='shadow' />
       <ClCard>
-        <ClProgress shape='round' size='xsmall' percent={20} bgColor='cyan' />
+        <ClProgress shape='round' size='xsmall' percent={20} bgColor='red' />
       </ClCard>
       <ClCard>
-        <ClProgress shape='round' size='small' percent={40} bgColor='light-cyan' />
+        <ClProgress shape='round' size='small' percent={40} bgColor='light-red' />
       </ClCard>
       <ClCard>
-        <ClProgress shape='round' size='normal' percent={80} bgColor='gradualBlue' />
+        <ClProgress shape='round' size='normal' percent={80} bgColor='gradualRed' />
       </ClCard>
     </ClLayout>
   )

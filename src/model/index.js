@@ -1,5 +1,15 @@
 export const updateList = [
   {
+    title: '0.2.3',
+    time: '2019-07-15',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'COMPONENT',
+      '- 新增 FloatButton 浮动按钮组件'
+    ]
+  },
+  {
     title: '0.2.2',
     time: '2019-07-13',
     bgColor: 'grey',

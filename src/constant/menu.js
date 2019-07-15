@@ -37,6 +37,9 @@ export const baseList = [
     key: 'button',
     name: 'Button 按钮'
   }, {
+    key: 'floatButton',
+    name: 'FloatButton 浮动按钮'
+  }, {
     key: 'text',
     name: 'Text 文字'
   }
