@@ -118,14 +118,14 @@ export default class Index extends Component {
            marginDirection='bottom'
          >{cards}</ClLayout>
                               :
-         <ClLayout margin='xlarge' marginDirection='vertical' padding='xlarge' paddingDirection='bottom'>
+         active === 0 ? <ClLayout margin='xlarge' marginDirection='vertical' padding='xlarge' paddingDirection='bottom'>
            <ClMenuList card list={tempfilter} onClick={(index) => {
              Taro.navigateTo({
                url: tempfilter[index].url
              })
            }}
            />
-         </ClLayout>
+         </ClLayout> : ''
         }
         {active === 1 ? update : ''}
         <ClTabBar tabs={tabs} fix active={active} onClick={(index) => {
