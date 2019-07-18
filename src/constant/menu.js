@@ -58,6 +58,9 @@ export const actionList = [
   }, {
     key: 'animation',
     name: 'Animation 动画'
+  }, {
+    key: 'message',
+    name: 'Message 提示消息'
   }
 ]
 

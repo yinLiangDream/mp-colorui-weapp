@@ -5414,10 +5414,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mp-colorui@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.2.2.tgz#f7508014f064947a1307c0a5400eaed8b41c0771"
-  integrity sha512-P2UnG8tQmgvAK/2YG/Eh8DQX6/qH81HJ5dZq8PQMY6e9atl9Yy9FVDMkj99nniHxZ+/LGwbS3F44LlX1ggiblw==
+mp-colorui@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.2.3.tgz#265553bf7e29e0acc5de3036b63d1e801c380d3a"
+  integrity sha512-B+0JW6/slvRF5EhtqJ38CZqYlRwv4e8K4PibARJOkc32+XyjEB2aChlEgkvwsizwJ/zNYMv3nfmCQEUCidF+OA==
 
 ms@2.0.0:
   version "2.0.0"

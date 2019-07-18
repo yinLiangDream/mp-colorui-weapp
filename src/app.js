@@ -62,7 +62,8 @@ class App extends Component {
       'pages/components/animation/index',
       'pages/components/verticalTab/index',
       'pages/components/accordion/index',
-      'pages/components/floatButton/index'
+      'pages/components/floatButton/index',
+      'pages/components/message/index'
     ],
     window: {
       backgroundTextStyle: 'light',

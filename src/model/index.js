@@ -1,5 +1,19 @@
 export const updateList = [
   {
+    title: '0.2.4',
+    time: '2019-07-18',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'COMPONENT',
+      '- 新增 Message 消息提示组件',
+      'API',
+      '- 新增 Animation 组件 duration 属性',
+      'BUG',
+      '- 修复 FloatButton 组件拖动穿透事件，拖动卡顿问题，提升动画速度，并新增收拢动画'
+    ]
+  },
+  {
     title: '0.2.3',
     time: '2019-07-15',
     bgColor: 'grey',
