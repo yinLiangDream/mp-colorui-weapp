@@ -1,5 +1,16 @@
 export const updateList = [
   {
+    title: '0.2.5',
+    time: '2019-07-18',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'BUG',
+      '- 修复 Message 重复提示文字消失问题',
+      '- 补全 Message 代码提示'
+    ]
+  },
+  {
     title: '0.2.4',
     time: '2019-07-18',
     bgColor: 'grey',
