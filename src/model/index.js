@@ -1,5 +1,17 @@
 export const updateList = [
   {
+    title: '0.2.6',
+    time: '2019-07-19',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'API',
+      '- Card 组件新增 shadow 属性',
+      'BUG',
+      '- 修复 Message 的一些小问题'
+    ]
+  },
+  {
     title: '0.2.5',
     time: '2019-07-18',
     bgColor: 'grey',
