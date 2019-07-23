@@ -89,6 +89,9 @@ export const viewList = [
   }, {
     key: 'titleBar',
     name: 'TitleBar 标题栏'
+  }, {
+    key: 'divider',
+    name: 'Divider 分割线'
   }
 ]
 

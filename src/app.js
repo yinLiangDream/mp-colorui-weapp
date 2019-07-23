@@ -63,7 +63,8 @@ class App extends Component {
       'pages/components/verticalTab/index',
       'pages/components/accordion/index',
       'pages/components/floatButton/index',
-      'pages/components/message/index'
+      'pages/components/message/index',
+      'pages/components/divider/index'
     ],
     window: {
       backgroundTextStyle: 'light',

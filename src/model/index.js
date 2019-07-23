@@ -1,5 +1,21 @@
 export const updateList = [
   {
+    node: '2019-07'
+  },
+  {
+    title: '0.2.7',
+    time: '2019-07-23',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'COMPONENT',
+      '- 新增 Divider 分割线组价',
+      'BUG',
+      '- 修复 Timeline H5 适配问题',
+      '- 修复 Timeline node 节点展示不正确问题'
+    ]
+  },
+  {
     title: '0.2.6',
     time: '2019-07-19',
     bgColor: 'grey',
@@ -152,6 +168,9 @@ export const updateList = [
     time: '2019-07-01',
     bgColor: 'grey',
     content: ['BUG', '- 修复 H5 适配的部分问题', '- 修复 H5 Radio 样式问题']
+  },
+  {
+    node: '2019-06'
   },
   {
     title: '0.1.0',

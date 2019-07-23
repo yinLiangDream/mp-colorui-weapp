@@ -11,6 +11,9 @@ export default class Timeline extends Taro.Component {
         <ClTitleBar title='时间轴' textColor='black' type='icon' subTitle='timeline' subTitleColor='shadow' />
         <ClTimeline times={[
           {
+            node: '2019'
+          },
+          {
             content: ['我是内容，默认背景']
           }, {
             content: ['我是内容，有背景'],
