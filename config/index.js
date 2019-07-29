@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'mp-colorui-mp',
+projectName: 'mp-colorui-mp',
   date: '2019-6-15',
   designWidth: 750,
   deviceRatio: {

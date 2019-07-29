@@ -3,13 +3,29 @@ export const updateList = [
     node: '2019-07'
   },
   {
+    title: '0.3.0',
+    time: '2019-07-28',
+    bgColor: 'red',
+    iconColor: 'red',
+    content: [
+      'COMPONENT',
+      '- 新增 Form, FormItem 组件',
+      'API',
+      '- 新增内置校验函数',
+      'BUG',
+      '- 修复 Message 代码不提示问题',
+      '- 修复文档引入组件错误',
+      '- 修复 Input 组件 H5 下由于 value 绑定而无法输入的 bug（Taro 的 bug）'
+    ]
+  },
+  {
     title: '0.2.7',
     time: '2019-07-23',
     bgColor: 'grey',
     iconColor: 'grey',
     content: [
       'COMPONENT',
-      '- 新增 Divider 分割线组价',
+      '- 新增 Divider 分割线组件',
       'BUG',
       '- 修复 Timeline H5 适配问题',
       '- 修复 Timeline node 节点展示不正确问题'

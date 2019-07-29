@@ -64,7 +64,8 @@ class App extends Component {
       'pages/components/accordion/index',
       'pages/components/floatButton/index',
       'pages/components/message/index',
-      'pages/components/divider/index'
+      'pages/components/divider/index',
+      'pages/components/form/index'
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add mp-colorui/dist/style/index.scss --silent --no-progress
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add mp-colorui/dist/weapp/utils --silent --no-progress
 
 PATH: 
-  /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/.bin:/var/folders/4c/8tfsy4kj2k5f2lmd6p3lq9r40000gn/T/yarn--1563182411845-0.18254512152568414:/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/.bin:/Users/ly/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/aria2/bin
+  /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/.bin:/var/folders/4c/8tfsy4kj2k5f2lmd6p3lq9r40000gn/T/yarn--1564224068040-0.009368269685524844:/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/.bin:/Users/ly/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/aria2/bin
 
 Yarn version: 
   1.17.3
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/mp-colorui%2fdist/style/index.scss: Request "https://registry.yarnpkg.com/mp-colorui%2fdist/style/index.scss" returned a 405
+  Error: https://registry.yarnpkg.com/mp-colorui%2fdist/weapp/utils: Request "https://registry.yarnpkg.com/mp-colorui%2fdist/weapp/utils" returned a 405
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:66839:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:140464:22)
       at Request.emit (events.js:198:13)
@@ -63,7 +63,7 @@ npm manifest:
       "@tarojs/taro-swan": "1.3.4",
       "@tarojs/taro-tt": "1.3.4",
       "@tarojs/taro-weapp": "1.3.4",
-      "mp-colorui": "^0.2.2",
+      "mp-colorui": "^0.2.3",
       "nerv-devtools": "^1.4.0",
       "nervjs": "^1.4.0"
     },
@@ -5512,10 +5512,10 @@ Lockfile:
       rimraf "^2.5.4"
       run-queue "^1.0.3"
   
-  mp-colorui@^0.2.2:
-    version "0.2.2"
-    resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.2.2.tgz#f7508014f064947a1307c0a5400eaed8b41c0771"
-    integrity sha512-P2UnG8tQmgvAK/2YG/Eh8DQX6/qH81HJ5dZq8PQMY6e9atl9Yy9FVDMkj99nniHxZ+/LGwbS3F44LlX1ggiblw==
+  mp-colorui@^0.2.3:
+    version "0.2.3"
+    resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.2.3.tgz#265553bf7e29e0acc5de3036b63d1e801c380d3a"
+    integrity sha512-B+0JW6/slvRF5EhtqJ38CZqYlRwv4e8K4PibARJOkc32+XyjEB2aChlEgkvwsizwJ/zNYMv3nfmCQEUCidF+OA==
   
   ms@2.0.0:
     version "2.0.0"

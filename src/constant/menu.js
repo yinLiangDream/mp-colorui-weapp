@@ -97,6 +97,10 @@ export const viewList = [
 
 export const formList = [
   {
+    key: 'form',
+    name: 'Form 表单'
+  },
+  {
     key: 'input',
     name: 'Input 输入框'
   }, {
