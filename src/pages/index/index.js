@@ -1,23 +1,12 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
-import {
-  ClCard,
-  ClText,
-  ClIcon,
-  ClLayout,
-  ClFlex,
-  ClTabBar,
-  ClTimeline,
-  ClAnimation,
-  ClSearchBar,
-  ClMenuList
-} from 'mp-colorui'
-import { updateList } from '../../model/index'
-import menu, { baseList, actionList, formList, layoutList, navigateList, viewList } from '../../constant/menu'
+import { View } from '@tarojs/components';
+import Taro, { Component } from '@tarojs/taro';
+import { ClAnimation, ClCard, ClFlex, ClFloatButton, ClIcon, ClLayout, ClMenuList, ClSearchBar, ClTabBar, ClText, ClTimeline } from 'mp-colorui';
+import * as menu from '../../constant/menu.js';
+import { updateList } from '../../model/index';
+import './index.scss';
 
-import './index.scss'
 
-const allList = [].concat(baseList, actionList, formList, layoutList, navigateList, viewList)
+const allList = [].concat(menu.baseList, menu.actionList, menu.formList, menu.layoutList, menu.navigateList, menu.viewList)
 export default class Index extends Component {
 
   config = {
@@ -39,7 +28,36 @@ export default class Index extends Component {
         animate: 'scale-up',
         show: true
       })
-    }, 100)
+    }, 200)
+    if (Taro.getEnv() !== Taro.ENV_TYPE.WEB && Taro.canIUse('getUpdateManager')) {
+      let updateManager = Taro.getUpdateManager();
+      updateManager.onCheckForUpdate(res => {
+        console.log(res)
+        if (res.hasUpdate) {
+          updateManager.onUpdateReady(() => {
+            Taro.showModal({
+              title: '更新提示',
+              content: '有新版本，是否重启应用？',
+              success: ress => {
+                if (ress.confirm) {
+                  updateManager.applyUpdate()
+                } else if (ress.cancel) {
+                  return false
+                }
+              }
+            })
+          })
+          updateManager.onUpdateFailed(() => {
+            Taro.hideLoading();
+            Taro.showModal({
+              title: '更新失败',
+              content: '新版本更新失败，请检查网络',
+              showCancel: false
+            })
+          })
+        }
+      })
+    }
   }
 
   componentWillUnmount () { }
@@ -69,7 +87,8 @@ export default class Index extends Component {
         badge: false
       }
     ]
-    const cards = menu.map((item, index) => (
+    const weapp = Taro.getEnv() === Taro.ENV_TYPE.WEAPP;
+    const cards = menu.default.map((item, index) => (
       <View key={item.key} onClick={() => {
         Taro.navigateTo({
           url: `/pages/${item.key}/index`
@@ -134,6 +153,15 @@ export default class Index extends Component {
           })
         }}
         />
+        {weapp ? <ClFloatButton closeWithShadow={false} shadow={false} open={false} icon='comment' size='large' bgColor='gradualGreen' onClick={() => {
+          Taro.navigateToMiniProgram({
+            appId: 'wx8abaf00ee8c3202e',
+            extraData: {
+              id: '74218'
+            }
+          })
+        }}
+        /> : ''}
       </View>
     )
   }

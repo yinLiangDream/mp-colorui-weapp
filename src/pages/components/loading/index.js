@@ -48,9 +48,9 @@ export default function Loading () {
       <ClCard>
         <ClSwitch title='modal加载' type='form' checked={modalLoading} onChange={(flag) => {
           setModalLoading(flag)
-          setTimeout(() => {
-            setModalLoading(false)
-          }, 3000)
+          // setTimeout(() => {
+          //   setModalLoading(false)
+          // }, 3000)
         }}
         />
       </ClCard>

@@ -3,10 +3,41 @@ export const updateList = [
     node: '2019-07'
   },
   {
+    title: '0.3.3',
+    time: '2019-07-31',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'BUG',
+      '- 修复H5 Switch color 为红色不显示问题',
+      '- 修复小程序 Switch 引入报错问题'
+    ]
+  },
+  {
+    title: '0.3.2',
+    time: '2019-07-31',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'ADAPTATION',
+      '- Switch H5 适配'
+    ]
+  },
+  {
+    title: '0.3.1',
+    time: '2019-07-30',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'ADAPTATION',
+      '- Checkbox H5 适配'
+    ]
+  },
+  {
     title: '0.3.0',
     time: '2019-07-28',
-    bgColor: 'red',
-    iconColor: 'red',
+    bgColor: 'grey',
+    iconColor: 'grey',
     content: [
       'COMPONENT',
       '- 新增 Form, FormItem 组件',
