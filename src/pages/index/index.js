@@ -153,7 +153,7 @@ export default class Index extends Component {
           })
         }}
         />
-        {weapp ? <ClFloatButton closeWithShadow={false} shadow={false} open={false} icon='comment' size='large' bgColor='gradualGreen' onClick={() => {
+        {weapp ? <ClFloatButton open={false} icon='comment' size='large' bgColor='gradualGreen' onClick={() => {
           Taro.navigateToMiniProgram({
             appId: 'wx8abaf00ee8c3202e',
             extraData: {

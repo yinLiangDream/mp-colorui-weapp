@@ -1,5 +1,39 @@
 export const updateList = [
   {
+    node: '2019-08'
+  },
+  {
+    title: '0.3.6',
+    time: '2019-08-06',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'ADAPTATION',
+      '- Swiper Card 模式 H5 适配',
+      '- 祝大家明天七夕快乐~'
+    ]
+  },
+  {
+    title: '0.3.5',
+    time: '2019-08-04',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'ADAPTATION',
+      '- VerticalTab 组件 H5 适配'
+    ]
+  },
+  {
+    title: '0.3.4',
+    time: '2019-08-03',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'BUG',
+      '- 修复 FloatButton 不展开仍然有阴影 bug'
+    ]
+  },
+  {
     node: '2019-07'
   },
   {

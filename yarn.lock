@@ -941,7 +941,7 @@ babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.7"
 
-babel-eslint@^8.2.62:
+babel-eslint@^10.0.2:
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.2.tgz#182d5ac204579ff0881684b040560fdcc1558456"
   integrity sha512-UdsurWPtgiPgpJ06ryUnuaSXC2s0WoSZnQmEpbAH65XZSdwowgN5MvyP7e88nW07FYXv72erVtpBkxyDVKhH1Q==
@@ -5420,10 +5420,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mp-colorui@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.3.2.tgz#4fc9c806bdb3fa1e70e00333cce51bcce4832a8d"
-  integrity sha512-Ua2scLkKKRfuKmEfeFLOzjN+VTwY4DMvD7Px9XYcFQ+9o1FvpLv6YixbK3vcZ7r0/GUfBnPvvVMzl+LJFy2RbA==
+mp-colorui@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.3.6.tgz#6057871f7234e8693ff86f09916fd0e007b1fbf0"
+  integrity sha512-1bGYAItJqt3trUglBicsMJHkzfQacGChoMLGj+BsKduromjqtFKG7b2C2ZEBCU0D3ybfGd6ssnXfw+5o/51m5Q==
 
 ms@2.0.0:
   version "2.0.0"
