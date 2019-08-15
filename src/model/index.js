@@ -3,6 +3,16 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.3.7',
+    time: '2019-08-15',
+    bgColor: 'grey',
+    iconColor: 'grey',
+    content: [
+      'ADAPTATION',
+      '- Select mode=region 模块重构，并且适配 H5，H5 能直接选择地址'
+    ]
+  },,
+  {
     title: '0.3.6',
     time: '2019-08-06',
     bgColor: 'grey',
