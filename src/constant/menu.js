@@ -61,6 +61,9 @@ export const actionList = [
   }, {
     key: 'message',
     name: 'Message 提示消息'
+  }, {
+    key: 'tip',
+    name: 'Tip 提示'
   }
 ]
 
