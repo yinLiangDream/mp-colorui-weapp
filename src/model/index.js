@@ -3,6 +3,16 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.4.1',
+    time: '2019-08-22',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      'FEATURE',
+      'Icon 组件支持第三方图标'
+    ]
+  },
+  {
     title: '0.4.0',
     time: '2019-08-22',
     bgColor: 'gradualBlue',
