@@ -3,6 +3,22 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.4.2',
+    time: '2019-08-27',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      'FEATURE',
+      '组件 Avatar 可自定义大小',
+      '组件 Flex 新增属性 direction，用于控制浮动布局的方向',
+      'BUG',
+      '修复 MenuList 组件 list 属性下的 disabled 属性声明为必输项问题',
+      '修复无法自定义主题颜色问题',
+      '修复组件 Form,FormItem 不设置规则直接会出现err问题',
+      '修复组件 FormItem 初始化时就进行数据校验问题'
+    ]
+  },
+  {
     title: '0.4.1',
     time: '2019-08-22',
     bgColor: 'olive',
