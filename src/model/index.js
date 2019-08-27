@@ -3,6 +3,34 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.4.5',
+    time: '2019-08-28',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🐞BUG',
+      '修复 Input 组件 align 失效问题',
+      '修复 Input 组件无法输入问题',
+      '修复 Checkbox 组件在 H5 下 onChange 事件参数错误问题'
+    ]
+  },
+  {
+    title: '0.4.4',
+    time: '2019-08-28',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉FEATURE',
+      '组件 Input 新增 titleWidth、align、pattern 属性',
+      '🐞BUG',
+      '修复 Form 组件校验的一些问题',
+      '修复 FormItem required属性，红点显示的位置',
+      '取消 Message 组件的阴影',
+      '修复 Button 组件 disabled 下仍然有点击效果的问题',
+      '修复 Button 组件 disabled 下的颜色一直为白色问题'
+    ]
+  },
+  {
     title: '0.4.2',
     time: '2019-08-27',
     bgColor: 'olive',

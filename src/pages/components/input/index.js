@@ -15,6 +15,18 @@ export default function Input () {
         <ClInput title='年龄' placeholder='请输入年龄' type='number' />
       </ClCard>
 
+      <ClTitleBar title='形式' textColor='black' type='icon' subTitle='title' subTitleColor='shadow' />
+      <ClCard>
+        <ClInput title='标准形式' placeholder='请输入姓名' />
+        <ClInput title='material 形式' placeholder='请输入年龄' type='number' pattern='material' />
+      </ClCard>
+
+      <ClTitleBar title='标题宽度' textColor='black' type='icon' subTitle='title' subTitleColor='shadow' />
+      <ClCard>
+        <ClInput title='auto' placeholder='请输入姓名' />
+        <ClInput title='200宽度' placeholder='请输入年龄' type='number'  titleWidth={200} />
+      </ClCard>
+
       <ClTitleBar title='占位符' textColor='black' type='icon' subTitle='placeholder' subTitleColor='shadow' />
       <ClCard>
         <ClInput placeholder='我是提示内容' />
