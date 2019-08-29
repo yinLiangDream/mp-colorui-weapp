@@ -3,6 +3,20 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.4.6',
+    time: '2019-08-29',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉FEATURE',
+      '重写 ImagePicker 组件，imgList 属性内容更变，请注意❗️',
+      '🐞BUG',
+      '修复 Utils 没有 @types 类型声明问题',
+      '修复 Animation 组件为 type 为 none 的问题',
+      '修复 VerticalTab H5 端滚动抖动问题'
+    ]
+  },
+  {
     title: '0.4.5',
     time: '2019-08-28',
     bgColor: 'olive',

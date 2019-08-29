@@ -7,7 +7,8 @@ import {
   ClButton,
   ClTitleBar,
   ClCard,
-  ClMessage, ClCheckbox
+  ClMessage,
+  ClCheckbox
 } from 'mp-colorui'
 
 export default class Cl_Form extends Taro.Component {

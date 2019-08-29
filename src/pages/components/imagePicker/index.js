@@ -1,12 +1,42 @@
-import Taro from '@tarojs/taro'
-import { ClCard, ClImagePicker, ClLayout, ClTitleBar } from 'mp-colorui'
+import Taro, {useState} from '@tarojs/taro'
+import { ClCard, ClImagePicker, ClLayout, ClTitleBar, ClButton } from 'mp-colorui'
 
 export default function ImagePicker () {
+  const [imgList, setImgList] = useState([])
+  const success = (list) => {
+    setImgList(list)
+  }
   return (
     <ClLayout>
       <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
       <ClCard>
-        <ClImagePicker />
+        <ClImagePicker
+          chooseImgObj={{
+              success
+            }}
+          imgList={imgList}
+        />
+        <ClLayout padding='normal' paddingDirection='around'>
+          <ClButton
+            shape='round'
+            long
+            onClick={() => {
+              console.log(this.state)
+              setImgList(imgList.map((item) => {
+                item.status = 'loading'
+                return item
+              }))
+              imgList.forEach((item, index) => {
+                item.status = 'loading'
+                setTimeout(() => {
+                  item.status = 'success'
+                  if (index === 1) item.status = 'fail'
+                  setImgList(imgList)
+                }, (index + 1) * 1000)
+              })
+            }}
+          >开始上传</ClButton>
+        </ClLayout>
       </ClCard>
 
       <ClTitleBar title='最多选择 3 张图片' textColor='black' type='icon' subTitle='most' subTitleColor='shadow' />
