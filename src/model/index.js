@@ -3,6 +3,20 @@ export const updateList = [
     node: '2019-08'
   },
   {
+    title: '0.4.7',
+    time: '2019-08-30',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉FEATURE',
+      'SearchBar 新增 result、showResult、showLoading、onTouchResult 属性️',
+      '🐞BUG',
+      '修复 ImagePicker H5 端更变状态时的报错问题',
+      '修复 Tip 组件 H5 下显示位置异常问题',
+      '修复多个 SearchBar 状态会共享问题'
+    ]
+  },
+  {
     title: '0.4.6',
     time: '2019-08-29',
     bgColor: 'olive',
