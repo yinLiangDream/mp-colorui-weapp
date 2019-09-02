@@ -4005,10 +4005,15 @@ eslint-plugin-import@^2.18.2, eslint-plugin-import@^2.8.0:
     read-pkg-up "^2.0.0"
     resolve "^1.11.0"
 
-eslint-plugin-react-hooks@^1.6.1, eslint-plugin-react-hooks@^1.7.0:
+eslint-plugin-react-hooks@^1.6.1:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
+
+eslint-plugin-react-hooks@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.0.1.tgz#e898ec26a0a335af6f7b0ad1f0bedda7143ed756"
+  integrity sha512-xir+3KHKo86AasxlCV8AHRtIZPHljqCRRUYgASkbatmt0fad4+5GgC7zkT7o/06hdKM6MIwp8giHVXqBPaarHQ==
 
 eslint-plugin-react@7.10.0:
   version "7.10.0"
@@ -7378,10 +7383,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mp-colorui@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.4.6.tgz#d7965d5ee75f646965177a0c73c93f5810f785bb"
-  integrity sha512-Ms0F3LqnzURfKtOy96k8BCN2lx2fWQfhAtmnYwD67aQRiF7oEnWOEjcjJaigLEu0Swgiv5PoIt+U6KxWW0/fEw==
+mp-colorui@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/mp-colorui/-/mp-colorui-0.4.7.tgz#28817278d5586c00ea64486df711099da9771b65"
+  integrity sha512-tUrc+Oz4NhAsilfMgwFGyATv277drBGeoQorHW2TM9TXRzkXKnRMuZujq2V9YBy6NGQLf3GE5s34F2IgiWJ9qQ==
   dependencies:
     area-data "^5.0.6"
 

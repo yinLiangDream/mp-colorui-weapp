@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js unlink mp-colorui
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add eslint-plugin-react-hooks -D
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/aria2/bin:/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/.bin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/aria2/bin
 
 Yarn version: 
   1.17.3
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, rmdir '/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/mp-colorui/@types'
+  Error: EACCES: permission denied, unlink '/Users/ly/develop/WebProject/WeChatMiniProgram/mp-colorui-weapp/node_modules/@tarojs/cli/node_modules/file-entry-cache/changelog.md'
 
 npm manifest: 
   {
