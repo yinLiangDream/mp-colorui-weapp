@@ -3,6 +3,18 @@ export const updateList = [
     node: '2019-09'
   },
   {
+    title: '0.4.9',
+    time: '2019-09-07',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉🎉新增 SwiperAction 组件',
+      '🌟新增 FloatButton 可自定义位置属性 position',
+      '🐞修复 SearchBar H5端无法输入问题 修复 SearchBar 无效 class 属性问题',
+      '🐞修复各种组件因为 key 值编译时报 warning 问题'
+    ]
+  },
+  {
     title: '0.4.8',
     time: '2019-09-02',
     bgColor: 'olive',
