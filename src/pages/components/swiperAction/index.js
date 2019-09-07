@@ -63,7 +63,6 @@ export default function SwiperAction() {
       <ClSwiperAction
         direction="right"
         options={list}
-        disabled
         onOpened={() => {
           Taro.showToast({
             title: '打开',
