@@ -125,6 +125,10 @@ export const viewList = [
   {
     key: 'divider',
     name: 'Divider 分割线'
+  },
+  {
+    key: 'curtain',
+    name: 'Curtain 幕帘'
   }
 ];
 

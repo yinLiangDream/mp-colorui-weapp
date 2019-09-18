@@ -3,6 +3,15 @@ export const updateList = [
     node: '2019-09'
   },
   {
+    title: '0.4.11',
+    time: '2019-09-18',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉🎉新增 Curtain 幕帘组件'
+    ]
+  },
+  {
     title: '0.4.10',
     time: '2019-09-12',
     bgColor: 'olive',
