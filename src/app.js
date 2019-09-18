@@ -66,7 +66,8 @@ class App extends Component {
       'pages/components/divider/index',
       'pages/components/form/index',
       'pages/components/tip/index',
-      'pages/components/swiperAction/index'
+      'pages/components/swiperAction/index',
+      'pages/components/actionSheet/index'
     ],
     window: {
       backgroundTextStyle: 'light',

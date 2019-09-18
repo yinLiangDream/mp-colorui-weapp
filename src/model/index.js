@@ -3,6 +3,17 @@ export const updateList = [
     node: '2019-09'
   },
   {
+    title: '0.4.10',
+    time: '2019-09-12',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🎉🎉新增 ActionSheet 组件',
+      '🐞修复类型声明错误问题',
+      '🐞修复 Text 组件无法插入 children 问题'
+    ]
+  },
+  {
     title: '0.4.9',
     time: '2019-09-07',
     bgColor: 'olive',

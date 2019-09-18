@@ -82,6 +82,10 @@ export const actionList = [
   {
     key: 'swiperAction',
     name: 'SwiperAction 滑动操作'
+  },
+  {
+    key: 'actionSheet',
+    name: 'ActionSheet 动作面板'
   }
 ];
 
