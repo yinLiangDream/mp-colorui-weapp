@@ -4,7 +4,7 @@ import { ClCard, ClInput, ClLayout, ClTitleBar } from 'mp-colorui'
 export default function Input () {
   return (
     <ClLayout>
-      <ClTitleBar title='默认值' textColor='black' type='icon' subTitle='value' subTitleColor='shadow' />
+      <ClTitleBar title='默认值' textColor='black' type='icon' />
       <ClCard>
         <ClInput value='我是预先输入的内容' />
       </ClCard>

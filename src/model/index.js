@@ -3,6 +3,17 @@ export const updateList = [
     node: '2019-09'
   },
   {
+    title: '0.4.12',
+    time: '2019-09-22',
+    bgColor: 'olive',
+    iconColor: 'olive',
+    content: [
+      '🌟Input 组件新增 defaultValue 属性',
+      '🐞修复 Button 在H5 flex 布局下会拉伸问题',
+      '🐞修复含有 Input 控件的页面会报 width 错误 #12'
+    ]
+  },
+  {
     title: '0.4.11',
     time: '2019-09-18',
     bgColor: 'olive',
