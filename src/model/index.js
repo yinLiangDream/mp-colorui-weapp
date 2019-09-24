@@ -3,6 +3,16 @@ export const updateList = [
     node: '2019-09'
   },
   {
+    title: '0.5.0',
+    time: '2019-09-25',
+    bgColor: 'red',
+    iconColor: 'red',
+    content: [
+      '🎉🎉全面支持支付宝小程序~',
+      '🐞修复 Button 缺失的属性，并添加诸多属性'
+    ]
+  },
+  {
     title: '0.4.12',
     time: '2019-09-22',
     bgColor: 'olive',
