@@ -9,7 +9,7 @@ export default function Base () {
   return (
     <View>
       <ClTitleBar title='基础' type='border-title' textColor='black' borderColor='blue' />
-      <ClLayout padding='normal' paddingDirection='around'>
+      <ClLayout padding='normal' paddingDirection='vertical'>
         <MenuNavigate list={baseList} />
       </ClLayout>
     </View>

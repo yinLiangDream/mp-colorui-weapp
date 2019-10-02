@@ -17,6 +17,7 @@ class App extends Component {
     pages: [
       // 首页
       'pages/index/index',
+      'pages/update/index',
 
       // 组件导航
       'pages/base/index',

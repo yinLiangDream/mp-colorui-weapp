@@ -8,7 +8,7 @@ export default function ViewFunc() {
   return (
     <View>
       <ClTitleBar title='视图' type='border-title' textColor='black' borderColor='blue' />
-      <ClLayout padding='normal' paddingDirection='around'>
+      <ClLayout padding='normal' paddingDirection='vertical'>
         <MenuNavigate list={viewList} />
       </ClLayout>
     </View>

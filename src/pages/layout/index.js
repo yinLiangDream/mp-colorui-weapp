@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <View>
       <ClTitleBar title='布局' type='border-title' textColor='black' borderColor='blue' />
-      <ClLayout padding='normal' paddingDirection='around'>
+      <ClLayout padding='normal' paddingDirection='vertical'>
         <MenuNavigate list={layoutList} />
       </ClLayout>
     </View>

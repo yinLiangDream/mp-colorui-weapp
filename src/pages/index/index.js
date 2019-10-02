@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components';
-import Taro, { Component } from '@tarojs/taro';
+import Taro, { useState, useEffect } from '@tarojs/taro';
 import {
   ClAnimation,
   ClCard,
@@ -7,14 +7,13 @@ import {
   ClFloatButton,
   ClIcon,
   ClLayout,
-  ClMenuList,
   ClSearchBar,
   ClTabBar,
   ClText,
-  ClTimeline
 } from 'mp-colorui';
+
+import UserCenter from './components/userCenter'
 import * as menu from '../../constant/menu.js';
-import { updateList } from '../../model/index';
 import './index.scss';
 
 const allList = [].concat(
@@ -25,34 +24,39 @@ const allList = [].concat(
   menu.navigateList,
   menu.viewList
 );
-export default class Index extends Component {
-  config = {
-    navigationBarTitleText: 'MP-ColorUI'
-  };
 
-  state = {
-    active: 0,
-    animate: '',
-    show: false,
-    tempfilter: []
-  };
+export default function Index() {
+  // 变量声明区
+  const icons = ['emoji', 'cascades', 'we', 'form', 'apps', 'taxi'];
+  const tabs = [
+    {
+      icon: 'home',
+      title: '主页',
+      badge: false
+    },
+    {
+      icon: 'magic',
+      title: '关于',
+      badge: false
+    }
+  ];
+  const [active, setActive] = useState(0);
+  const [animate, setAnimation] = useState('none');
+  const [show, setShow] = useState(false);
+  const [tempfilter, setTempfilter] = useState([]);
 
-  componentWillMount() {}
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        animate: 'scale-up',
-        show: true
-      });
-    }, 200);
+  // 事件声明区
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setAnimation('scale-up');
+      setShow(true);
+    }, 800);
     if (
       Taro.getEnv() !== Taro.ENV_TYPE.WEB &&
       Taro.canIUse('getUpdateManager')
     ) {
       let updateManager = Taro.getUpdateManager();
       updateManager.onCheckForUpdate(res => {
-        console.log(res);
         if (res.hasUpdate) {
           updateManager.onUpdateReady(() => {
             Taro.showModal({
@@ -78,163 +82,109 @@ export default class Index extends Component {
         }
       });
     }
-  }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
-
-  render() {
-    const { active, animate, tempfilter } = this.state;
-    const icons = ['emoji', 'cascades', 'we', 'form', 'apps', 'taxi'];
-    const tabs = [
-      {
-        icon: 'home',
-        title: '主页',
-        badge: false
-      },
-      {
-        icon: 'magic',
-        title: '更新',
-        badge: false
-      }
-    ];
-    const bgcolor = ['cyan', 'blue', 'pink', 'red', 'orange', 'yellow'];
-    const weapp = Taro.getEnv() === Taro.ENV_TYPE.WEAPP;
-    const cards = menu.default.map((item, index) => (
-      <View
-        key={item.key}
-        onClick={() => {
-          Taro.navigateTo({
-            url: `/pages/${item.key}/index`
-          });
-        }}
-      >
-        <ClAnimation type={animate} delay={index / 10}>
-          <ClCard bgColor={bgcolor[index]}>
-            <View
-              style={{
-                backgroundImage:
-                  'url(https://md-1255362963.cos.ap-chengdu.myqcloud.com/mpcolorui/home.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <ClFlex justify="between" align="center">
-                <ClFlex align="center">
-                  <ClIcon iconName={icons[index]} color="white" />
-                  <ClLayout padding="small" paddingDirection="left">
-                    <ClText size="large" textColor="white">
-                      {item.name}
-                    </ClText>
-                    <ClText size="small" textColor="white">
-                      {item.description}
-                    </ClText>
-                  </ClLayout>
-                </ClFlex>
-                <ClIcon iconName="roundrightfill" color="white" />
-              </ClFlex>
-            </View>
-          </ClCard>
-        </ClAnimation>
-      </View>
-    ));
-    const update = (
-      <ClLayout
-        padding="xlarge"
-        paddingDirection="bottom"
-        margin="xlarge"
-        marginDirection="bottom"
-      >
-        <ClCard type="full">
-          <ClTimeline times={updateList} />
-        </ClCard>
-      </ClLayout>
-    );
-    return (
-      <View className="index">
-        {active === 0 ? (
-          <ClLayout padding="xlarge" paddingDirection="vertical">
-            <ClSearchBar
-              shape="round"
-              bgColor="gradualBlue"
-              fix
-              searchType="none"
-              showResult
-              result={tempfilter}
-              onTouchResult={index => {
-                Taro.navigateTo({
-                  url: tempfilter[index].url
-                });
-              }}
-              onInput={value => {
-                this.setState({
-                  tempfilter:
-                    value !== ''
-                      ? allList
-                          .filter(item =>
-                            item.name
-                              .toLowerCase()
-                              .includes(value.toLocaleLowerCase())
-                          )
-                          .map(item => ({
-                            arrow: true,
-                            title: item.name,
-                            key: item.key,
-                            url: `/pages/components/${item.key}/index`
-                          }))
-                      : []
-                });
-              }}
-            />
-          </ClLayout>
-        ) : (
-          ''
-        )}
-        {active === 0 ? (
-          <ClLayout
-            padding="xlarge"
-            paddingDirection="bottom"
-            margin="xlarge"
-            marginDirection="bottom"
+  //组件区
+  const cardsComponent = menu.default.map((item, index) => (
+    <View
+      key={item.key}
+      onClick={() => {
+        Taro.navigateTo({
+          url: `/pages/${item.key}/index`
+        });
+      }}
+    >
+      <ClAnimation type={animate} delay={index / 10}>
+        <ClCard bgColor='white'>
+          <View
+            style={{
+              backgroundImage:
+                'url(https://md-1255362963.cos.ap-chengdu.myqcloud.com/mpcolorui/home.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
           >
-            {cards}
-          </ClLayout>
-        ) : (
-          ''
-        )}
-        {active === 1 ? update : ''}
-        <ClTabBar
-          tabs={tabs}
-          fix
-          active={active}
-          onClick={index => {
-            this.setState({
-              active: index
-            });
-          }}
-        />
-        {weapp ? (
-          <ClFloatButton
-            open={false}
-            icon="comment"
-            size="large"
-            bgColor="green"
-            onClick={() => {
-              Taro.navigateToMiniProgram({
-                appId: 'wx8abaf00ee8c3202e',
-                extraData: {
-                  id: '74218'
-                }
+            <ClFlex justify='between' align='center'>
+              <ClFlex align='center'>
+                <ClIcon iconName={icons[index]} color='cyan' />
+                <ClLayout padding='small' paddingDirection='left'>
+                  <ClText size='xlarge' text={item.name} fontWeight='bold' />
+                  <ClText size='xsmall' textColor='gray' text={item.description} />
+                </ClLayout>
+              </ClFlex>
+              <ClIcon iconName='roundrightfill' color='blue' />
+            </ClFlex>
+          </View>
+        </ClCard>
+      </ClAnimation>
+    </View>
+  ));
+  return (
+    <View className='index'>
+      {active === 0 ? (
+        <ClLayout padding='xlarge' paddingDirection='vertical'>
+          <ClSearchBar
+            shape='round'
+            bgColor='white'
+            fix
+            searchType='none'
+            placeholder='找不到组件在哪？来试试搜索组件吧！'
+            showResult
+            result={tempfilter}
+            onTouchResult={index => {
+              Taro.navigateTo({
+                url: tempfilter[index].url
               });
             }}
+            onInput={value => {
+              setTempfilter(value !== ''
+              ? allList
+                  .filter(item =>
+                    item.name
+                      .toLowerCase()
+                      .includes(value.toLocaleLowerCase())
+                  )
+                  .map(item => ({
+                    arrow: true,
+                    title: item.name,
+                    key: item.key,
+                    url: `/pages/components/${item.key}/index`
+                  }))
+              : [])
+            }}
           />
-        ) : (
-          ''
-        )}
-      </View>
-    );
-  }
+        </ClLayout>
+      ) : (
+        ''
+      )}
+      {active === 0 ? (
+        <ClLayout
+          padding='xlarge'
+          paddingDirection='bottom'
+          margin='xlarge'
+          marginDirection='bottom'
+        >
+          { show ? cardsComponent : ''}
+        </ClLayout>
+      ) : (
+        ''
+      )}
+      {active === 1 ? <UserCenter /> : ''}
+      <ClTabBar
+        tabs={tabs}
+        fix
+        active={active}
+        onClick={index => {
+          setActive(index)
+        }}
+      />
+    </View>
+  );
 }
+
+Index.config = {
+  navigationBarTitleText: 'MP-ColorUI'
+};

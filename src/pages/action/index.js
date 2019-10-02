@@ -8,7 +8,7 @@ export default function Action() {
   return (
     <View>
       <ClTitleBar title='操作反馈' type='border-title' textColor='black' borderColor='blue' />
-      <ClLayout padding='normal' paddingDirection='around'>
+      <ClLayout padding='normal' paddingDirection='vertical'>
         <MenuNavigate list={actionList} />
       </ClLayout>
     </View>
