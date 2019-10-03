@@ -1,5 +1,7 @@
-import Taro from '@tarojs/taro'
+import Taro, { useState } from '@tarojs/taro'
 import { ClButton, ClCard, ClLayout, ClStep, ClTitleBar } from 'mp-colorui'
+import GenerateCode from '../../../components/generateCode'
+import { customIconCode, positionCode, typeCode } from './code'
 
 const steps = [
   {
@@ -28,62 +30,56 @@ const customSteps = [
     icon: 'medalfill'
   }
 ]
-export default class Steps extends Taro.Component {
-  config = {
-    navigationBarTitleText: 'Steps 步骤条'
+
+export default function Steps() {
+  const [stepShape, setStepShape] = useState(0)
+  const next = () => {
+    setStepShape(stepShape > 3 ? 0 : stepShape + 1)
   }
-
-  state = {
-    stepShape: 0
-  }
-
-  next () {
-    const stepShape = this.state.stepShape > 3 ? 0 : this.state.stepShape + 1;
-    this.setState({
-      stepShape
-    })
-  }
-
-  render () {
-    const {stepShape} = this.state;
-    return (
-      <ClLayout>
-        <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type'/>
-        <ClCard>
-          <ClStep steps={steps} type='arrow' step={stepShape} activeColor='blue' />
-        </ClCard>
-        <ClCard>
-          <ClStep steps={steps} type='line' step={stepShape} activeColor='brown' />
-        </ClCard>
-        <ClLayout padding='normal' paddingDirection='around'>
-          <ClButton bgColor='light-blue' long onClick={this.next.bind(this)}>下一步</ClButton>
-        </ClLayout>
-
-        <ClTitleBar title='自定义图标' textColor='black' type='icon' subTitle='custom'/>
-        <ClCard>
-          <ClStep steps={customSteps} type='arrow' stepIconType='custom' step={stepShape} activeColor='blue' />
-        </ClCard>
-        <ClCard>
-          <ClStep steps={customSteps} type='line' stepIconType='custom' step={stepShape} activeColor='brown' />
-        </ClCard>
-        <ClCard>
-          <ClStep steps={customSteps} type='arrow' stepIconType='space' step={stepShape} activeColor='blue' />
-        </ClCard>
-        <ClLayout padding='normal' paddingDirection='around'>
-          <ClButton bgColor='light-blue' long onClick={this.next.bind(this)}>下一步</ClButton>
-        </ClLayout>
-
-        <ClTitleBar title='文字位置' textColor='black' type='icon' subTitle='stepTitlePosition'/>
-        <ClCard>
-          <ClStep steps={customSteps} stepTitlePosition='bottom' type='line' stepIconType='custom' step={stepShape} activeColor='blue' />
-        </ClCard>
-        <ClCard>
-          <ClStep steps={customSteps} stepTitlePosition='top' type='line' stepIconType='custom' step={stepShape} activeColor='blue' />
-        </ClCard>
-        <ClLayout padding='normal' paddingDirection='around'>
-          <ClButton bgColor='light-blue' long onClick={this.next.bind(this)}>下一步</ClButton>
-        </ClLayout>
+  return (
+    <ClLayout>
+      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' />
+      <ClCard>
+        <ClStep steps={steps} type='arrow' step={stepShape} activeColor='blue' />
+      </ClCard>
+      <ClCard>
+        <ClStep steps={steps} type='line' step={stepShape} activeColor='brown' />
+      </ClCard>
+      <ClLayout padding='normal' paddingDirection='around'>
+        <ClButton bgColor='light-blue' long onClick={next}>下一步</ClButton>
       </ClLayout>
-    )
-  }
+      <GenerateCode code={typeCode} />
+
+      <ClTitleBar title='自定义图标' textColor='black' type='icon' subTitle='custom' />
+      <ClCard>
+        <ClStep steps={customSteps} type='arrow' stepIconType='custom' step={stepShape} activeColor='blue' />
+      </ClCard>
+      <ClCard>
+        <ClStep steps={customSteps} type='line' stepIconType='custom' step={stepShape} activeColor='brown' />
+      </ClCard>
+      <ClCard>
+        <ClStep steps={customSteps} type='arrow' stepIconType='space' step={stepShape} activeColor='blue' />
+      </ClCard>
+      <ClLayout padding='normal' paddingDirection='around'>
+        <ClButton bgColor='light-blue' long onClick={next}>下一步</ClButton>
+      </ClLayout>
+      <GenerateCode code={customIconCode} />
+
+      <ClTitleBar title='文字位置' textColor='black' type='icon' subTitle='stepTitlePosition' />
+      <ClCard>
+        <ClStep steps={customSteps} stepTitlePosition='bottom' type='line' stepIconType='custom' step={stepShape} activeColor='blue' />
+      </ClCard>
+      <ClCard>
+        <ClStep steps={customSteps} stepTitlePosition='top' type='line' stepIconType='custom' step={stepShape} activeColor='blue' />
+      </ClCard>
+      <ClLayout padding='normal' paddingDirection='around'>
+        <ClButton bgColor='light-blue' long onClick={next}>下一步</ClButton>
+      </ClLayout>
+      <GenerateCode code={positionCode} />
+    </ClLayout>
+  )
+}
+
+Steps.config = {
+  navigationBarTitleText: 'Steps 步骤条'
 }
