@@ -1,6 +1,8 @@
 import Taro, { useState } from '@tarojs/taro'
 import { ClCard, ClLayout, ClSearchBar, ClTitleBar } from 'mp-colorui'
 import PCAA from 'area-data/pcaa'
+import GenerateCode from '../../../components/generateCode'
+import { actionsCode, colorCode, placeholderCode, resultCode } from './code'
 
 let timer
 export default function SearchBar () {
@@ -42,7 +44,7 @@ export default function SearchBar () {
 
   return (
     <ClLayout>
-      <ClTitleBar title='搜索结果&异步 loading' textColor='black' type='icon'/>
+      <ClTitleBar title='搜索结果&异步 loading' textColor='black' type='icon' />
       <ClSearchBar
         shape='radius'
         bgColor='gradualBlue'
@@ -74,27 +76,41 @@ export default function SearchBar () {
         showResult
         result={filterResult}
       />
-      <ClTitleBar title='形状&背景色' textColor='black' type='icon' subTitle='shape&bgColor' subTitleColor='shadow'/>
+      <ClLayout margin='normal' marginDirection='vertical'>
+        <GenerateCode code={resultCode} />
+      </ClLayout>
+      <ClTitleBar title='形状&背景色' textColor='black' type='icon' subTitle='shape&bgColor' subTitleColor='shadow' />
       <ClCard>
-        <ClSearchBar shape='radius' bgColor='grey' onSearch={value => {
-          onSearch(value)
-        }}
+        <ClSearchBar
+          shape='radius'
+          bgColor='grey'
+          onSearch={value => {
+            onSearch(value)
+          }}
         />
       </ClCard>
       <ClCard>
-        <ClSearchBar shape='round' bgColor='light-blue' onSearch={value => {
-          onSearch(value)
-        }}
+        <ClSearchBar
+          shape='round'
+          bgColor='light-blue'
+          onSearch={value => {
+            onSearch(value)
+          }}
         />
       </ClCard>
+      <GenerateCode code={colorCode} />
 
-      <ClTitleBar title='占位符' textColor='black' type='icon' subTitle='placeholder' subTitleColor='shadow'/>
+      <ClTitleBar title='占位符' textColor='black' type='icon' subTitle='placeholder' subTitleColor='shadow' />
       <ClCard>
-        <ClSearchBar shape='round' placeholder='请输入你想输入的内容' onSearch={value => {
-          onSearch(value)
-        }}
+        <ClSearchBar
+          shape='round'
+          placeholder='请输入你想输入的内容'
+          onSearch={value => {
+            onSearch(value)
+          }}
         />
       </ClCard>
+      <GenerateCode code={placeholderCode} />
 
       <ClTitleBar
         title='功能组&按钮颜色'
@@ -123,6 +139,7 @@ export default function SearchBar () {
           }}
         />
       </ClCard>
+      <GenerateCode code={actionsCode} />
     </ClLayout>
   )
 }
