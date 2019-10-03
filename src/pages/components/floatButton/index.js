@@ -1,20 +1,22 @@
 import Taro from '@tarojs/taro';
 import { ClCard, ClFloatButton, ClText } from 'mp-colorui';
 import { View } from '@tarojs/components';
+import GenerateCode from '../../../components/generateCode'
+import {demo} from './code'
 
 export default function FloatButton() {
   const text =
-    '浮动按钮可以设置颜色、形状、是否可移动、是否展开、点击阴影关闭等，由于初始位置只能固定一个位置，所以就放一个简单的 demo， 此 demo 可以移动';
+    '浮动按钮可以设置颜色、形状、是否可移动、是否展开、点击阴影关闭等，此 demo 可以移动';
   return (
     <View>
       <ClCard>
         <ClText text={text} />
       </ClCard>
       <ClFloatButton
-        size="large"
-        bgColor="red"
+        size='large'
+        bgColor='red'
         closeWithShadow
-        direction="vertical"
+        direction='vertical'
         move
         actionList={[
           {
@@ -25,6 +27,7 @@ export default function FloatButton() {
           }
         ]}
       />
+      <GenerateCode code={demo} />
     </View>
   );
 }
