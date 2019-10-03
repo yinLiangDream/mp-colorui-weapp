@@ -1,6 +1,8 @@
 import Taro from '@tarojs/taro';
-import { ClDivider, ClTitleBar } from 'mp-colorui';
+import { ClDivider, ClLayout, ClTitleBar } from 'mp-colorui'
 import { View } from "@tarojs/components";
+import GenerateCode from '../../../components/generateCode'
+import { colorCode, normalCode, sizeCode } from './code'
 
 export default function Divider() {
   return (
@@ -11,6 +13,9 @@ export default function Divider() {
         type='icon'
       />
       <ClDivider>我是分割线</ClDivider>
+      <ClLayout margin='normal' marginDirection='vertical'>
+        <GenerateCode code={normalCode} />
+      </ClLayout>
       <ClTitleBar
         title='颜色'
         textColor='black'
@@ -19,6 +24,9 @@ export default function Divider() {
       <ClDivider color='red'>我是分割线</ClDivider>
       <ClDivider color='yellow'>我是分割线</ClDivider>
       <ClDivider color='blue'>我是分割线</ClDivider>
+      <ClLayout margin='normal' marginDirection='vertical'>
+        <GenerateCode code={colorCode} />
+      </ClLayout>
       <ClTitleBar
         title='大小'
         textColor='black'
@@ -27,6 +35,9 @@ export default function Divider() {
       <ClDivider size='xsmall'>我是分割线</ClDivider>
       <ClDivider size='normal'>我是分割线</ClDivider>
       <ClDivider size='xxlarge'>我是分割线</ClDivider>
+      <ClLayout margin='normal' marginDirection='vertical'>
+        <GenerateCode code={sizeCode} />
+      </ClLayout>
     </View>
   );
 }
