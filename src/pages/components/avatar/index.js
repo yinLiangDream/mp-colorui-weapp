@@ -1,5 +1,7 @@
 import Taro from '@tarojs/taro'
 import { ClAvatar, ClCard, ClFlex, ClLayout, ClTitleBar } from 'mp-colorui'
+import GenerateCode from '../../../components/generateCode'
+import { headersCode, shadowCode, shapeCode, sizeCode, typeCode } from './code'
 
 const headerArray = [
    {
@@ -32,6 +34,7 @@ export default class Avatar extends Taro.Component {
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='round' />
           </ClFlex>
         </ClCard>
+        <GenerateCode code={shapeCode} />
 
         <ClTitleBar title='大小' textColor='black'type='icon' subTitle='size' />
         <ClCard>
@@ -50,6 +53,7 @@ export default class Avatar extends Taro.Component {
             <ClAvatar headerArray={headerArray.slice(1, 2)} shape='round' size='xlarge' />
           </ClFlex>
         </ClCard>
+        <GenerateCode code={sizeCode} />
 
         <ClTitleBar title='阴影' textColor='black'type='icon' subTitle='shadow' />
         <ClCard>
@@ -60,6 +64,7 @@ export default class Avatar extends Taro.Component {
             <ClAvatar headerArray={headerArray.slice(0, 1)} shape='round' size='xlarge' shadow />
           </ClFlex>
         </ClCard>
+        <GenerateCode code={shadowCode} />
 
         <ClTitleBar title='类型（文字、图标、角标）' textColor='black'type='icon' subTitle='type' />
         <ClCard>
@@ -70,6 +75,7 @@ export default class Avatar extends Taro.Component {
             <ClAvatar headerArray={headerArray.slice(3, 4)} shape='round' size='normal' shadow />
           </ClFlex>
         </ClCard>
+        <GenerateCode code={typeCode} />
 
         <ClTitleBar title='头像组' textColor='black'type='icon' subTitle='array' />
         <ClCard>
@@ -77,6 +83,7 @@ export default class Avatar extends Taro.Component {
             <ClAvatar headerArray={headerArray} shape='round' size='normal' shadow />
           </ClFlex>
         </ClCard>
+        <GenerateCode code={headersCode} />
       </ClLayout>
     )
   }
