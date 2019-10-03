@@ -65,11 +65,13 @@ projectName: 'mp-colorui-mp',
           }
         }
       }
-    }
+    },
+    compile: {}
   },
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['taro_rich_text'],
     module: {
       postcss: {
         autoprefixer: {

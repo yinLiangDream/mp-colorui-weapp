@@ -14,12 +14,12 @@ const rightIcon = [{
 export default function NavBar() {
   return (
     <ClLayout>
-      <ClTitleBar title='背景色' textColor='black' type='icon' subTitle='bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='背景色' textColor='black' type='icon' subTitle='bgColor'/>
       <ClCard>
         <ClNavBar leftIcon={[]} bgColor='light-blue' title='我是标题' />
       </ClCard>
 
-      <ClTitleBar title='图标' textColor='black' type='icon' subTitle='icon' subTitleColor='shadow' />
+      <ClTitleBar title='图标' textColor='black' type='icon' subTitle='icon'/>
       <ClCard>
         <ClNavBar leftIcon={leftIcon} rightIcon={rightIcon} title='我是标题' />
       </ClCard>

@@ -10,7 +10,7 @@ export default function Message () {
   return (
     <ClLayout>
       <ClMessage message={text} show={show} type={type} duration={duration} bgColor={bgColor} />
-      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type'/>
       <ClCard>
         <ClFlex justify='between'>
           <ClButton shape='round' bgColor={'light-grey'} onClick={() => {
@@ -39,7 +39,7 @@ export default function Message () {
           }}>警告</ClButton>
         </ClFlex>
       </ClCard>
-      <ClTitleBar title='持续时间' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='持续时间' textColor='black' type='icon' subTitle='type'/>
       <ClCard>
         注意：若引用该组件后 duration 发生变化，请自己手动设置 duration，由于单一实例问题，会默认使用前一个状态的 duration。
       </ClCard>
@@ -65,7 +65,7 @@ export default function Message () {
           }}>永久保持</ClButton>
         </ClFlex>
       </ClCard>
-      <ClTitleBar title='自定义背景色' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='自定义背景色' textColor='black' type='icon' subTitle='type'/>
       <ClCard>
         <ClFlex justify='between'>
           <ClButton shape='round' bgColor={'black'} onClick={() => {

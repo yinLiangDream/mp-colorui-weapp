@@ -38,14 +38,14 @@ export default class Grid extends Taro.Component {
   render () {
     return (
       <ClLayout>
-        <ClTitleBar title='等分列' textColor='black' type='icon' subTitle='grid' subTitleColor='shadow' />
+        <ClTitleBar title='等分列' textColor='black' type='icon' subTitle='grid'/>
         {this.renderCards(1)}
         {this.renderCards(2)}
         {this.renderCards(3)}
         {this.renderCards(4)}
         {this.renderCards(5)}
 
-        <ClTitleBar title='等高' textColor='black' type='icon' subTitle='square' subTitleColor='shadow' />
+        <ClTitleBar title='等高' textColor='black' type='icon' subTitle='square'/>
         <ClCard>
           <ClGrid mode='square' col={3}>
             <View className='bg-blue light'>1</View>

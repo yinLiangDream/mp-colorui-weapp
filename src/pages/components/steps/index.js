@@ -48,7 +48,7 @@ export default class Steps extends Taro.Component {
     const {stepShape} = this.state;
     return (
       <ClLayout>
-        <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+        <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type'/>
         <ClCard>
           <ClStep steps={steps} type='arrow' step={stepShape} activeColor='blue' />
         </ClCard>
@@ -59,7 +59,7 @@ export default class Steps extends Taro.Component {
           <ClButton bgColor='light-blue' long onClick={this.next.bind(this)}>下一步</ClButton>
         </ClLayout>
 
-        <ClTitleBar title='自定义图标' textColor='black' type='icon' subTitle='custom' subTitleColor='shadow' />
+        <ClTitleBar title='自定义图标' textColor='black' type='icon' subTitle='custom'/>
         <ClCard>
           <ClStep steps={customSteps} type='arrow' stepIconType='custom' step={stepShape} activeColor='blue' />
         </ClCard>
@@ -73,7 +73,7 @@ export default class Steps extends Taro.Component {
           <ClButton bgColor='light-blue' long onClick={this.next.bind(this)}>下一步</ClButton>
         </ClLayout>
 
-        <ClTitleBar title='文字位置' textColor='black' type='icon' subTitle='stepTitlePosition' subTitleColor='shadow' />
+        <ClTitleBar title='文字位置' textColor='black' type='icon' subTitle='stepTitlePosition'/>
         <ClCard>
           <ClStep steps={customSteps} stepTitlePosition='bottom' type='line' stepIconType='custom' step={stepShape} activeColor='blue' />
         </ClCard>

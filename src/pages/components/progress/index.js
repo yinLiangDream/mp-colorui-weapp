@@ -4,7 +4,7 @@ import { ClCard, ClLayout, ClProgress, ClTitleBar } from 'mp-colorui'
 export default function Progress() {
   return (
     <ClLayout>
-      <ClTitleBar title='形状' textColor='black' type='icon' subTitle='shape' subTitleColor='shadow' />
+      <ClTitleBar title='形状' textColor='black' type='icon' subTitle='shape'/>
       <ClCard>
         <ClProgress shape='normal' percent={10} />
       </ClCard>
@@ -16,7 +16,7 @@ export default function Progress() {
       </ClCard>
 
 
-      <ClTitleBar title='背景色' textColor='black' type='icon' subTitle='bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='背景色' textColor='black' type='icon' subTitle='bgColor'/>
       <ClCard>
         <ClProgress shape='round' percent={20} bgColor='red' />
       </ClCard>
@@ -27,7 +27,7 @@ export default function Progress() {
         <ClProgress shape='round' percent={80} bgColor='gradualRed' />
       </ClCard>
 
-      <ClTitleBar title='纹理' textColor='black' type='icon' subTitle='stripe' subTitleColor='shadow' />
+      <ClTitleBar title='纹理' textColor='black' type='icon' subTitle='stripe'/>
       <ClCard>
         <ClProgress shape='round' stripe percent={20} bgColor='red' />
       </ClCard>
@@ -35,7 +35,7 @@ export default function Progress() {
         <ClProgress shape='round' stripe percent={40} bgColor='light-red' />
       </ClCard>
 
-      <ClTitleBar title='动画' textColor='black' type='icon' subTitle='animation' subTitleColor='shadow' />
+      <ClTitleBar title='动画' textColor='black' type='icon' subTitle='animation'/>
       <ClCard>
         <ClProgress animation shape='round' stripe percent={20} bgColor='red' />
       </ClCard>
@@ -43,7 +43,7 @@ export default function Progress() {
         <ClProgress animation shape='round' stripe percent={40} bgColor='light-red' />
       </ClCard>
 
-      <ClTitleBar title='大小' textColor='black' type='icon' subTitle='size' subTitleColor='shadow' />
+      <ClTitleBar title='大小' textColor='black' type='icon' subTitle='size'/>
       <ClCard>
         <ClProgress shape='round' size='xsmall' percent={20} bgColor='red' />
       </ClCard>

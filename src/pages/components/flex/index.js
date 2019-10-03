@@ -51,20 +51,20 @@ export default function Flex () {
   ))
   return (
     <ClLayout>
-      <ClTitleBar title='固定尺寸' textColor='black' type='icon' subTitle='basis' subTitleColor='shadow' />
+      <ClTitleBar title='固定尺寸' textColor='black' type='icon' subTitle='basis'/>
       {base}
 
-      <ClTitleBar title='比例布局' textColor='black' type='icon' subTitle='flex' subTitleColor='shadow' />
+      <ClTitleBar title='比例布局' textColor='black' type='icon' subTitle='flex'/>
       <ClCard>
         <ClFlex>
           {per}
         </ClFlex>
       </ClCard>
 
-      <ClTitleBar title='水平对齐' textColor='black' type='icon' subTitle='justify' subTitleColor='shadow' />
+      <ClTitleBar title='水平对齐' textColor='black' type='icon' subTitle='justify'/>
       {justifyComponent}
 
-      <ClTitleBar title='垂直对齐' textColor='black' type='icon' subTitle='align' subTitleColor='shadow' />
+      <ClTitleBar title='垂直对齐' textColor='black' type='icon' subTitle='align'/>
       {alignComponent}
     </ClLayout>
   )

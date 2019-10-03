@@ -13,7 +13,7 @@ export default function Radio () {
   const [checkedValue, setCheckedValue] = useState('male')
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type'/>
       <ClCard>
         <ClRadio type='normal' title='normal' radioGroup={radioGroup} checkedValue={checkedValue} />
       </ClCard>
@@ -24,7 +24,7 @@ export default function Radio () {
         <ClRadio type='list' title='性别' radioGroup={radioGroup} checkedValue={checkedValue} />
       </ClCard>
 
-      <ClTitleBar title='方向' textColor='black' type='icon' subTitle='direction' subTitleColor='shadow' />
+      <ClTitleBar title='方向' textColor='black' type='icon' subTitle='direction'/>
       <ClCard>
         <ClRadio type='normal' title='normal' radioGroup={radioGroup} checkedValue={checkedValue}
           direction='horizontal'
@@ -34,7 +34,7 @@ export default function Radio () {
         <ClRadio type='form' title='性别' radioGroup={radioGroup} checkedValue={checkedValue} direction='horizontal' />
       </ClCard>
 
-      <ClTitleBar title='颜色' textColor='black' type='icon' subTitle='color' subTitleColor='shadow' />
+      <ClTitleBar title='颜色' textColor='black' type='icon' subTitle='color'/>
       <ClCard>
         <ClRadio type='normal' title='normal' radioGroup={radioGroup} checkedValue={checkedValue} direction='horizontal'
           color='blue'
@@ -46,7 +46,7 @@ export default function Radio () {
         />
       </ClCard>
 
-      <ClTitleBar title='形状' textColor='black' type='icon' subTitle='shape' subTitleColor='shadow' />
+      <ClTitleBar title='形状' textColor='black' type='icon' subTitle='shape'/>
       <ClCard>
         <ClRadio type='normal' shape='normal' title='normal' radioGroup={radioGroup} checkedValue={checkedValue}
           direction='horizontal' color='blue'

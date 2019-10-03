@@ -39,17 +39,17 @@ export default class TextView extends Taro.Component {
     ))
     return (
       <ClLayout>
-        <ClTitleBar title='文字大小' textColor='black' type='icon' subTitle='size' subTitleColor='shadow' />
+        <ClTitleBar title='文字大小' textColor='black' type='icon' subTitle='size'/>
         <ClLayout padding='normal' paddingDirection='around'>
           {sizeComponent}
         </ClLayout>
 
-        <ClTitleBar title='文字颜色' textColor='black' type='icon' subTitle='color' subTitleColor='shadow' />
+        <ClTitleBar title='文字颜色' textColor='black' type='icon' subTitle='color'/>
         <ClFlex justify='around' align='center' wrap>
           {colorComponent}
         </ClFlex>
 
-        <ClTitleBar title='文字截断' textColor='black' type='icon' subTitle='cut' subTitleColor='shadow' />
+        <ClTitleBar title='文字截断' textColor='black' type='icon' subTitle='cut'/>
         <ClFlex>
           <ClCard bgColor='grey'>
             <View style={{ width: pxTransform(300)}}>
@@ -58,7 +58,7 @@ export default class TextView extends Taro.Component {
           </ClCard>
         </ClFlex>
 
-        <ClTitleBar title='文字对齐' textColor='black' type='icon' subTitle='align' subTitleColor='shadow' />
+        <ClTitleBar title='文字对齐' textColor='black' type='icon' subTitle='align'/>
         <ClFlex wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
@@ -73,7 +73,7 @@ export default class TextView extends Taro.Component {
           </View>
         </ClFlex>
 
-        <ClTitleBar title='特殊' textColor='black' type='icon' subTitle='special' subTitleColor='shadow' />
+        <ClTitleBar title='特殊' textColor='black' type='icon' subTitle='special'/>
         <ClFlex wrap>
           <View style={{ flex: 1 }}>
             <ClCard>

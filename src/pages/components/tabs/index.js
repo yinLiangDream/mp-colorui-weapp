@@ -43,7 +43,7 @@ const iconTabs = [
 export default function Tabs() {
   return (
     <ClLayout>
-      <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
+      <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default'/>
       <ClCard>
         <ClTabs tabs={defaultTabs}>
           {
@@ -55,7 +55,7 @@ export default function Tabs() {
           }
         </ClTabs>
       </ClCard>
-      <ClTitleBar title='可拖动' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
+      <ClTitleBar title='可拖动' textColor='black' type='icon' subTitle='default'/>
       <ClCard>
         <ClTabs tabs={defaultTabs} touchMove>
           {
@@ -68,7 +68,7 @@ export default function Tabs() {
         </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='平分' textColor='black' type='icon' subTitle='verb' subTitleColor='shadow' />
+      <ClTitleBar title='平分' textColor='black' type='icon' subTitle='verb'/>
       <ClCard>
         <ClTabs tabs={verbTabs} type='verb'>
           {
@@ -79,7 +79,7 @@ export default function Tabs() {
         </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='居中' textColor='black' type='icon' subTitle='center' subTitleColor='shadow' />
+      <ClTitleBar title='居中' textColor='black' type='icon' subTitle='center'/>
       <ClCard>
         <ClTabs tabs={verbTabs.map(item => ({
           text: item.text,
@@ -93,7 +93,7 @@ export default function Tabs() {
         </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='激活色&背景色' textColor='black' type='icon' subTitle='activeColor&bgColor' subTitleColor='shadow' />
+      <ClTitleBar title='激活色&背景色' textColor='black' type='icon' subTitle='activeColor&bgColor'/>
       <ClCard>
         <ClTabs tabs={verbTabs.map(item => ({
           text: item.text,
@@ -107,7 +107,7 @@ export default function Tabs() {
         </ClTabs>
       </ClCard>
 
-      <ClTitleBar title='带图标' textColor='black' type='icon' subTitle='icon' subTitleColor='shadow' />
+      <ClTitleBar title='带图标' textColor='black' type='icon' subTitle='icon'/>
       <ClCard>
         <ClTabs tabs={iconTabs} type='center'>
           {

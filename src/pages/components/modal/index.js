@@ -7,7 +7,7 @@ export default function Modal () {
   const [custom, setCustom] = useState(false)
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' subTitleColor='shadow' />
+      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type'/>
       <ClCard>
         <ClButton text='普通' long onClick={() => {
           setNormal(true)
@@ -31,7 +31,7 @@ export default function Modal () {
         }}
       >我是内容</ClModal>
 
-      <ClTitleBar title='自定义' textColor='black' type='icon' subTitle='custom' subTitleColor='shadow' />
+      <ClTitleBar title='自定义' textColor='black' type='icon' subTitle='custom'/>
       <ClCard>
         <ClButton text='自定义' bgColor='light-cyan' long onClick={() => {
           setCustom(true)

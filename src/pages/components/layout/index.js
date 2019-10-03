@@ -20,7 +20,7 @@ export default function Layout () {
         >我是 margin 内容</View></ClLayout>
       </ClCard>
 
-      <ClTitleBar title='浮动' textColor='black' type='icon' subTitle='float' subTitleColor='shadow' />
+      <ClTitleBar title='浮动' textColor='black' type='icon' subTitle='float'/>
       <ClCard>
         <ClLayout float='left'>我是左浮动</ClLayout>
         <ClLayout float='right'>我是右浮动</ClLayout>

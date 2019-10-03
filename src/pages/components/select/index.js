@@ -10,12 +10,12 @@ const muti = [
 export default function Select() {
   return (
     <ClLayout>
-      <ClTitleBar title='单列选择' textColor='black' type='icon' subTitle='selector' subTitleColor='shadow' />
+      <ClTitleBar title='单列选择' textColor='black' type='icon' subTitle='selector'/>
       <ClCard>
         <ClSelect selector={{range: single}} mode='selector' title='选择水果' />
       </ClCard>
 
-      <ClTitleBar title='多列选择' textColor='black' type='icon' subTitle='multiSelector' subTitleColor='shadow' />
+      <ClTitleBar title='多列选择' textColor='black' type='icon' subTitle='multiSelector'/>
       <ClCard>
         <ClSelect multiSelector={{
           range: muti
@@ -23,17 +23,17 @@ export default function Select() {
         />
       </ClCard>
 
-      <ClTitleBar title='时间选择' textColor='black' type='icon' subTitle='time' subTitleColor='shadow' />
+      <ClTitleBar title='时间选择' textColor='black' type='icon' subTitle='time'/>
       <ClCard>
         <ClSelect mode='time' title='选择时间' />
       </ClCard>
 
-      <ClTitleBar title='地区选择' textColor='black' type='icon' subTitle='region' subTitleColor='shadow' />
+      <ClTitleBar title='地区选择' textColor='black' type='icon' subTitle='region'/>
       <ClCard>
         <ClSelect mode='region' title='选择地点' />
       </ClCard>
 
-      <ClTitleBar title='日期选择' textColor='black' type='icon' subTitle='date' subTitleColor='shadow' />
+      <ClTitleBar title='日期选择' textColor='black' type='icon' subTitle='date'/>
       <ClCard>
         <ClSelect mode='date' title='选择日期' />
       </ClCard>

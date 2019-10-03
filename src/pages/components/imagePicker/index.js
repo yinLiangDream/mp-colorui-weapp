@@ -8,7 +8,7 @@ export default function ImagePicker () {
   }
   return (
     <ClLayout>
-      <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default' subTitleColor='shadow' />
+      <ClTitleBar title='默认' textColor='black' type='icon' subTitle='default'/>
       <ClCard>
         <ClImagePicker
           chooseImgObj={{
@@ -39,12 +39,12 @@ export default function ImagePicker () {
         </ClLayout>
       </ClCard>
 
-      <ClTitleBar title='最多选择 3 张图片' textColor='black' type='icon' subTitle='most' subTitleColor='shadow' />
+      <ClTitleBar title='最多选择 3 张图片' textColor='black' type='icon' subTitle='most'/>
       <ClCard>
         <ClImagePicker chooseImgObj={{ count: 3 }} />
       </ClCard>
 
-      <ClTitleBar title='删除图片确认操作' textColor='black' type='icon' subTitle='beforeDelete' subTitleColor='shadow' />
+      <ClTitleBar title='删除图片确认操作' textColor='black' type='icon' subTitle='beforeDelete'/>
       <ClCard>
         <ClImagePicker chooseImgObj={{ count: 3 }} beforeDel={async () => {
           const res = await Taro.showModal({
