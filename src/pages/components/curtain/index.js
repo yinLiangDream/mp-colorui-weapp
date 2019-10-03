@@ -1,6 +1,8 @@
 import Taro, { useState } from '@tarojs/taro'
 import { Image, View } from '@tarojs/components'
 import { ClButton, ClTitleBar, ClCard, ClFlex, ClCurtain } from 'mp-colorui'
+import GenerateCode from '../../../components/generateCode'
+import { positionCode } from './code'
 
 export default function Curtain () {
   const [show, setShow] = useState(false)
@@ -80,6 +82,7 @@ export default function Curtain () {
           >下右</ClButton>
         </ClFlex>
       </ClCard>
+      <GenerateCode code={positionCode} />
       <ClTitleBar
         title='点击阴影关闭'
         type='icon'
