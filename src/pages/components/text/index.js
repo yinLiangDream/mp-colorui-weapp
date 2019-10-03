@@ -4,6 +4,8 @@ import { View } from '@tarojs/components'
 
 import size from '../../../constant/size'
 import color from '../../../constant/color'
+import GenerateCode from '../../../components/generateCode'
+import code from './code'
 
 const sizeTip = [
   '说明文本，标签等关注度低的文字',
@@ -19,14 +21,18 @@ const sizeTip = [
 export default class TextView extends Taro.Component {
   render () {
     const sizeComponent = size.fontSize.map((item, index) => (
-      <ClCard key={item} bgColor='grey'>
-        <ClFlex align='center' justify='center'>
-          <ClText text={item} size={item} />
-        </ClFlex>
-        <ClFlex align='center' justify='center'>
-          {sizeTip[index]}
-        </ClFlex>
-      </ClCard>
+      <View key={item} >
+        <ClCard bgColor='grey'>
+          <ClFlex align='center' justify='center'>
+            <ClText text={item} size={item} />
+          </ClFlex>
+          <ClFlex align='center' justify='center'>
+            {sizeTip[index]}
+          </ClFlex>
+        </ClCard>
+        <GenerateCode code={code[`${item}Code`]} />
+      </View>
+
     ))
     const colorComponent = color.normalColor.map((item) => (
       <ClCard key={item.title} bgColor='light-gray'>
@@ -39,17 +45,18 @@ export default class TextView extends Taro.Component {
     ))
     return (
       <ClLayout>
-        <ClTitleBar title='文字大小' textColor='black' type='icon' subTitle='size'/>
+        <ClTitleBar title='文字大小' textColor='black' type='icon' subTitle='size' />
         <ClLayout padding='normal' paddingDirection='around'>
           {sizeComponent}
         </ClLayout>
 
-        <ClTitleBar title='文字颜色' textColor='black' type='icon' subTitle='color'/>
+        <ClTitleBar title='文字颜色' textColor='black' type='icon' subTitle='color' />
         <ClFlex justify='around' align='center' wrap>
           {colorComponent}
         </ClFlex>
+        <GenerateCode code={code.colorCode} />
 
-        <ClTitleBar title='文字截断' textColor='black' type='icon' subTitle='cut'/>
+        <ClTitleBar title='文字截断' textColor='black' type='icon' subTitle='cut' />
         <ClFlex>
           <ClCard bgColor='grey'>
             <View style={{ width: pxTransform(300)}}>
@@ -57,34 +64,41 @@ export default class TextView extends Taro.Component {
             </View>
           </ClCard>
         </ClFlex>
+        <GenerateCode code={code.cutCode} />
 
-        <ClTitleBar title='文字对齐' textColor='black' type='icon' subTitle='align'/>
+        <ClTitleBar title='文字对齐' textColor='black' type='icon' subTitle='align' />
         <ClFlex wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
               <ClText cut align='left'>泰国、新加坡、印度尼西亚~ </ClText>
             </ClCard>
+            <GenerateCode code={code.leftCode} />
             <ClCard>
               <ClText cut align='center'>泰国、新加坡、印度尼西亚~ </ClText>
             </ClCard>
+            <GenerateCode code={code.middleCode} />
             <ClCard>
               <ClText cut align='right'>泰国、新加坡、印度尼西亚~ </ClText>
             </ClCard>
+            <GenerateCode code={code.rightCode} />
           </View>
         </ClFlex>
 
-        <ClTitleBar title='特殊' textColor='black' type='icon' subTitle='special'/>
+        <ClTitleBar title='特殊' textColor='black' type='icon' subTitle='special' />
         <ClFlex wrap>
           <View style={{ flex: 1 }}>
             <ClCard>
               <ClText align='center' special='firstUpper'>abc 首字母大写</ClText>
             </ClCard>
+            <GenerateCode code={code.firstUpperCode} />
             <ClCard>
               <ClText align='center' special='upper'>abc 全部大写</ClText>
             </ClCard>
+            <GenerateCode code={code.upperCode} />
             <ClCard>
               <ClText align='center' special='lower'>abc 全部小写</ClText>
             </ClCard>
+            <GenerateCode code={code.lowerCode} />
           </View>
         </ClFlex>
       </ClLayout>
