@@ -1,22 +1,32 @@
-import Taro from '@tarojs/taro'
-import { ClVerticalTab, ClVerticalTabCell } from 'mp-colorui'
-import { View } from '@tarojs/components'
+import Taro from "@tarojs/taro";
+import { ClLayout, ClVerticalTab, ClVerticalTabCell } from "mp-colorui";
+import { View } from "@tarojs/components";
+import GenerateCode from "../../../components/generateCode";
+import { demoCode } from "./code";
 
 export default function VerticalTab() {
-  const tabs = [...Array(50)].map((key, index) => ({name: 'tab-' + index, id: 'id-' + index}))
+  const tabs = [...Array(50)].map((key, index) => ({
+    name: "tab-" + index,
+    id: "id-" + index
+  }));
   return (
-    <ClVerticalTab tabs={tabs} height={1000}>
-      <View>
-        {tabs.map((item) => (
-          <View id={item.id} key={item.name}>
-            <ClVerticalTabCell>{item.name}</ClVerticalTabCell>
-          </View>
-        ))}
-      </View>
-    </ClVerticalTab>
-  )
+    <View>
+      <ClVerticalTab tabs={tabs} height={1000}>
+        <View>
+          {tabs.map(item => (
+            <View id={item.id} key={item.name}>
+              <ClVerticalTabCell>{item.name}</ClVerticalTabCell>
+            </View>
+          ))}
+        </View>
+      </ClVerticalTab>
+      <ClLayout paddingDirection="vertical" padding="normal">
+        <GenerateCode code={demoCode} />
+      </ClLayout>
+    </View>
+  );
 }
 
 VerticalTab.config = {
-  navigationBarTitleText: '垂直导航 VerticalTab'
-}
+  navigationBarTitleText: "垂直导航 VerticalTab"
+};
