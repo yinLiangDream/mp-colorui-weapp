@@ -1,4 +1,4 @@
-import Taro, { useState } from '@tarojs/taro';
+import Taro, { useState } from "@tarojs/taro";
 import {
   ClButton,
   ClCard,
@@ -8,22 +8,22 @@ import {
   ClTitleBar,
   ClText,
   ClTimeline
-} from 'mp-colorui';
-import { View } from '@tarojs/components';
+} from "mp-colorui";
+import { View } from "@tarojs/components";
 
-import GenerateCode from '../../../components/generateCode'
+import GenerateCode from "../../../components/generateCode";
 
-import { normalCode, customCode } from './code'
+import { normalCode, customCode } from "./code";
 
 export default function Modal() {
   const [normal, setNormal] = useState(false);
   const [custom, setCustom] = useState(false);
   return (
     <ClLayout>
-      <ClTitleBar title='类型' textColor='black' type='icon' subTitle='type' />
+      <ClTitleBar title="类型" textColor="black" type="icon" subTitle="type" />
       <ClCard>
         <ClButton
-          text='普通'
+          text="普通"
           long
           onClick={() => {
             setNormal(true);
@@ -34,16 +34,16 @@ export default function Modal() {
       <ClModal
         show={normal}
         closeWithShadow
-        title='我是标题'
+        title="我是标题"
         close
         actions={[
           {
-            text: '取消',
-            color: 'red'
+            text: "取消",
+            color: "red"
           },
           {
-            text: '确认',
-            color: 'blue'
+            text: "确认",
+            color: "blue"
           }
         ]}
         onCancel={() => {
@@ -54,8 +54,8 @@ export default function Modal() {
         }}
         onClick={index => {
           Taro.showToast({
-            title: index === 0 ? '取消' : '确认',
-            icon: 'none'
+            title: index === 0 ? "取消" : "确认",
+            icon: "none"
           });
         }}
       >
@@ -63,15 +63,15 @@ export default function Modal() {
       </ClModal>
 
       <ClTitleBar
-        title='自定义头部和操作按钮组'
-        textColor='black'
-        type='icon'
-        subTitle='custom'
+        title="自定义头部和操作按钮组"
+        textColor="black"
+        type="icon"
+        subTitle="custom"
       />
       <ClCard>
         <ClButton
-          text='自定义'
-          bgColor='light-cyan'
+          text="自定义"
+          bgColor="light-cyan"
           long
           onClick={() => {
             setCustom(true);
@@ -86,11 +86,11 @@ export default function Modal() {
         close
         renderTitle={
           <ClTitleBar
-            title='我是自定义的标题'
-            textColor='black'
-            type='sub-title'
-            subTitle='custom'
-            subTitleColor='shadow'
+            title="我是自定义的标题"
+            textColor="black"
+            type="sub-title"
+            subTitle="custom"
+            subTitleColor="shadow"
           />
         }
         onCancel={() => {
@@ -98,29 +98,29 @@ export default function Modal() {
         }}
         renderAction={
           <ClLayout>
-            <ClFlex justify='around'>
-              <View className='flex-sub'>
+            <ClFlex justify="around">
+              <View className="flex-sub">
                 <ClButton
-                  bgColor='light-red'
+                  bgColor="light-red"
                   long
                   onClick={() => {
                     Taro.showToast({
-                      title: '取消',
-                      icon: 'none'
+                      title: "取消",
+                      icon: "none"
                     });
                   }}
                 >
                   取消
                 </ClButton>
               </View>
-              <View className='flex-sub'>
+              <View className="flex-sub">
                 <ClButton
-                  bgColor='light-blue'
+                  bgColor="light-blue"
                   long
                   onClick={() => {
                     Taro.showToast({
-                      title: '确认',
-                      icon: 'none'
+                      title: "确认",
+                      icon: "none"
                     });
                   }}
                 >
@@ -131,12 +131,12 @@ export default function Modal() {
           </ClLayout>
         }
       >
-        <ClText text='我是内容，我可以插入任何内容，点击阴影也可以关闭，头部自定义，使用了组件 TitleBar，脚部 actions 使用了两个 button' />
-        <ClLayout padding='normal' paddingDirection='vertical'>
+        <ClText text="我是内容，我可以插入任何内容，点击阴影也可以关闭，头部自定义，使用了组件 TitleBar，脚部 actions 使用了两个 button" />
+        <ClLayout padding="normal" paddingDirection="vertical">
           <ClTimeline
             times={[
               {
-                content: ['这是我插入的 Timeline 组件']
+                content: ["这是我插入的 Timeline 组件"]
               }
             ]}
           />
@@ -147,5 +147,5 @@ export default function Modal() {
 }
 
 Modal.config = {
-  navigationBarTitleText: 'Modal 模态框'
+  navigationBarTitleText: "Modal 模态框"
 };
