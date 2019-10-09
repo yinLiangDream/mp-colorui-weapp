@@ -1,3 +1,9 @@
+export const autoFocusCode = `
+\`\`\`
+<ClInput defaultValue="自动聚焦" autoFocus />
+\`\`\`
+`
+
 export const valueCode = `
 \`\`\`
 <ClInput defaultValue="我是预先输入的内容" />

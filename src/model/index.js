@@ -1,5 +1,30 @@
 export const updateList = [
   {
+    node: "2019-10"
+  },
+  {
+    title: "0.5.5",
+    time: "2019-10-09",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🌟Input 组件新增 autoFocus 属性",
+      "🎉🎉所有组件可以添加 className 和 style 属性",
+      "🐞fix 前几个版本的 utils 问题"
+    ]
+  },
+  {
+    title: "0.5.2",
+    time: "2019-10-05",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🐞fix Radio 组件，不渲染问题",
+      "🐞fix Select 组件，多选不渲染问题",
+      "🐞fix According 组件，在某些机型下高度不对的问题"
+    ]
+  },
+  {
     node: "2019-09"
   },
   {

@@ -11,12 +11,19 @@ import {
   titleCode,
   titleWidthCode,
   typeCode,
-  valueCode
+  valueCode,
+  autoFocusCode
 } from "./code";
 
 export default function Input() {
   return (
     <ClLayout>
+    <ClTitleBar title="自动聚焦" textColor="black" type="icon" />
+      <ClCard>
+        <ClInput defaultValue="自动聚焦" />
+      </ClCard>
+      <GenerateCode code={autoFocusCode} />
+
       <ClTitleBar title="默认值" textColor="black" type="icon" />
       <ClCard>
         <ClInput defaultValue="我是预先输入的内容" />
