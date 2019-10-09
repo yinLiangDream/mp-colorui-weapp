@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "MP-ColorUI 的小程序介绍版本",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/:_authToken=448a6d96977435c5999efe214959052720924e0e"
+  },
   "templateInfo": {
     "name": "default",
     "typescript": false,
