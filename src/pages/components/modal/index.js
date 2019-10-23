@@ -11,10 +11,6 @@ import {
 } from "mp-colorui";
 import { View } from "@tarojs/components";
 
-import GenerateCode from "../../../components/generateCode";
-
-import { normalCode, customCode } from "./code";
-
 export default function Modal() {
   const [normal, setNormal] = useState(false);
   const [custom, setCustom] = useState(false);
@@ -30,7 +26,6 @@ export default function Modal() {
           }}
         />
       </ClCard>
-      <GenerateCode code={normalCode} />
       <ClModal
         show={normal}
         closeWithShadow
@@ -78,7 +73,6 @@ export default function Modal() {
           }}
         />
       </ClCard>
-      <GenerateCode code={customCode} />
       <ClModal
         show={custom}
         closeWithShadow

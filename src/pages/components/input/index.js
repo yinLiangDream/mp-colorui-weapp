@@ -1,41 +1,24 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClInput, ClLayout, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import {
-  autoPushCode,
-  contentCode,
-  disabledCode,
-  longCode,
-  patternCode,
-  placeholderCode,
-  titleCode,
-  titleWidthCode,
-  typeCode,
-  valueCode,
-  autoFocusCode
-} from "./code";
 
 export default function Input() {
   return (
     <ClLayout>
-    <ClTitleBar title="自动聚焦" textColor="black" type="icon" />
+      <ClTitleBar title="自动聚焦" textColor="black" type="icon" />
       <ClCard>
         <ClInput defaultValue="自动聚焦" />
       </ClCard>
-      <GenerateCode code={autoFocusCode} />
 
       <ClTitleBar title="默认值" textColor="black" type="icon" />
       <ClCard>
         <ClInput defaultValue="我是预先输入的内容" />
       </ClCard>
-      <GenerateCode code={valueCode} />
 
       <ClTitleBar title="标题" textColor="black" type="icon" subTitle="title" />
       <ClCard>
         <ClInput title="姓名" placeholder="请输入姓名" />
         <ClInput title="年龄" placeholder="请输入年龄" type="number" />
       </ClCard>
-      <GenerateCode code={titleCode} />
 
       <ClTitleBar title="形式" textColor="black" type="icon" subTitle="title" />
       <ClCard>
@@ -47,7 +30,6 @@ export default function Input() {
           pattern="material"
         />
       </ClCard>
-      <GenerateCode code={patternCode} />
 
       <ClTitleBar
         title="标题宽度"
@@ -64,7 +46,6 @@ export default function Input() {
           titleWidth={200}
         />
       </ClCard>
-      <GenerateCode code={titleWidthCode} />
 
       <ClTitleBar
         title="占位符"
@@ -75,7 +56,6 @@ export default function Input() {
       <ClCard>
         <ClInput placeholder="我是提示内容" />
       </ClCard>
-      <GenerateCode code={placeholderCode} />
 
       <ClTitleBar title="类型" textColor="black" type="icon" subTitle="type" />
       <ClCard>
@@ -94,8 +74,6 @@ export default function Input() {
         <ClInput placeholder="我可以输入身份证" type="idcard" />
       </ClCard>
 
-      <GenerateCode code={typeCode} />
-
       <ClTitleBar title="长度" textColor="black" type="icon" subTitle="long" />
       <ClCard>
         <ClInput
@@ -104,7 +82,6 @@ export default function Input() {
           maxLength={10}
         />
       </ClCard>
-      <GenerateCode code={longCode} />
 
       <ClTitleBar
         title="禁止输入"
@@ -115,7 +92,6 @@ export default function Input() {
       <ClCard>
         <ClInput placeholder="我禁止输入" type="text" disabled />
       </ClCard>
-      <GenerateCode code={disabledCode} />
 
       <ClTitleBar
         title="自动上推"
@@ -126,7 +102,6 @@ export default function Input() {
       <ClCard>
         <ClInput placeholder="我自动上推" type="text" adjustPosition />
       </ClCard>
-      <GenerateCode code={autoPushCode} />
 
       <ClTitleBar
         title="后置内容"
@@ -179,7 +154,6 @@ export default function Input() {
           }}
         />
       </ClCard>
-      <GenerateCode code={contentCode} />
     </ClLayout>
   );
 }

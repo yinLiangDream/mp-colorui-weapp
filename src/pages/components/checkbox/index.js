@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClCheckbox, ClLayout, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { colorCode, positionCode, shapeCode, typeCode } from "./code";
 
 const checkboxGroup = [
   {
@@ -26,7 +24,6 @@ export default function Checkbox() {
       <ClCard>
         <ClCheckbox title="选一个" type="form" checkboxGroup={checkboxGroup} />
       </ClCard>
-      <GenerateCode code={typeCode} />
 
       <ClTitleBar
         title="方向"
@@ -50,7 +47,6 @@ export default function Checkbox() {
           direction="horizontal"
         />
       </ClCard>
-      <GenerateCode code={positionCode} />
 
       <ClTitleBar title="颜色" textColor="black" type="icon" subTitle="color" />
       <ClCard>
@@ -70,7 +66,6 @@ export default function Checkbox() {
           direction="horizontal"
         />
       </ClCard>
-      <GenerateCode code={colorCode} />
 
       <ClTitleBar title="形状" textColor="black" type="icon" subTitle="shape" />
       <ClCard>
@@ -92,7 +87,6 @@ export default function Checkbox() {
           direction="horizontal"
         />
       </ClCard>
-      <GenerateCode code={shapeCode} />
     </ClLayout>
   );
 }

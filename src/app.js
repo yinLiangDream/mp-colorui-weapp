@@ -69,7 +69,8 @@ class App extends Component {
       "pages/components/tip/index",
       "pages/components/swiperAction/index",
       "pages/components/actionSheet/index",
-      "pages/components/curtain/index"
+      "pages/components/curtain/index",
+      "pages/components/noticeBar/index"
     ],
     window: {
       backgroundTextStyle: "light",

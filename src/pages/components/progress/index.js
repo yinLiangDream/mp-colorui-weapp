@@ -1,13 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClProgress, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import {
-  animationCode,
-  colorCode,
-  shapeCode,
-  sizeCode,
-  stripeCode
-} from "./code";
 
 export default function Progress() {
   return (
@@ -22,7 +14,6 @@ export default function Progress() {
       <ClCard>
         <ClProgress shape="round" percent={40} />
       </ClCard>
-      <GenerateCode code={shapeCode} />
 
       <ClTitleBar
         title="背景色"
@@ -39,7 +30,6 @@ export default function Progress() {
       <ClCard>
         <ClProgress shape="round" percent={80} bgColor="gradualRed" />
       </ClCard>
-      <GenerateCode code={colorCode} />
 
       <ClTitleBar
         title="纹理"
@@ -53,7 +43,6 @@ export default function Progress() {
       <ClCard>
         <ClProgress shape="round" stripe percent={40} bgColor="light-red" />
       </ClCard>
-      <GenerateCode code={stripeCode} />
 
       <ClTitleBar
         title="动画"
@@ -73,7 +62,6 @@ export default function Progress() {
           bgColor="light-red"
         />
       </ClCard>
-      <GenerateCode code={animationCode} />
 
       <ClTitleBar title="大小" textColor="black" type="icon" subTitle="size" />
       <ClCard>
@@ -95,7 +83,6 @@ export default function Progress() {
           bgColor="gradualRed"
         />
       </ClCard>
-      <GenerateCode code={sizeCode} />
     </ClLayout>
   );
 }

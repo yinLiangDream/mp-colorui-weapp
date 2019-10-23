@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClAccordion, ClLayout, ClText, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { cardCode, disabledAnimationCode, normalCode, speedCode } from "./code";
 
 export default class Accordion extends Taro.Component {
   static config = {
@@ -54,9 +52,6 @@ export default class Accordion extends Taro.Component {
           textColor="black"
         />
         {this.renderContent(false, true)}
-        <ClLayout padding="normal" paddingDirection="vertical">
-          <GenerateCode code={normalCode} />
-        </ClLayout>
         <ClTitleBar
           type="icon"
           title="卡片模式"
@@ -64,9 +59,6 @@ export default class Accordion extends Taro.Component {
           textColor="black"
         />
         {this.renderContent(true, true)}
-        <ClLayout padding="normal" paddingDirection="vertical">
-          <GenerateCode code={cardCode} />
-        </ClLayout>
         <ClTitleBar
           type="icon"
           title="禁止动画"
@@ -74,9 +66,6 @@ export default class Accordion extends Taro.Component {
           textColor="black"
         />
         {this.renderContent(false, false)}
-        <ClLayout padding="normal" paddingDirection="vertical">
-          <GenerateCode code={disabledAnimationCode} />
-        </ClLayout>
         <ClTitleBar
           type="icon"
           title="展开速度"
@@ -84,9 +73,6 @@ export default class Accordion extends Taro.Component {
           textColor="black"
         />
         {this.renderContent(false, true, 0.5)}
-        <ClLayout padding="normal" paddingDirection="vertical">
-          <GenerateCode code={speedCode} />
-        </ClLayout>
       </ClLayout>
     );
   }

@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClNavBar, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { colorCode, iconCode } from "./code";
 
 const leftIcon = [
   {
@@ -41,7 +39,6 @@ export default function NavBar() {
           }}
         />
       </ClCard>
-      <GenerateCode code={colorCode} />
 
       <ClTitleBar title="图标" textColor="black" type="icon" subTitle="icon" />
       <ClCard>
@@ -63,7 +60,6 @@ export default function NavBar() {
           }}
         />
       </ClCard>
-      <GenerateCode code={iconCode} />
     </ClLayout>
   );
 }

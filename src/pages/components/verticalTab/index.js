@@ -1,8 +1,6 @@
 import Taro from "@tarojs/taro";
-import { ClLayout, ClVerticalTab, ClVerticalTabCell } from "mp-colorui";
+import { ClVerticalTab, ClVerticalTabCell } from "mp-colorui";
 import { View } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import { demoCode } from "./code";
 
 export default function VerticalTab() {
   const tabs = [...Array(50)].map((key, index) => ({
@@ -20,9 +18,6 @@ export default function VerticalTab() {
           ))}
         </View>
       </ClVerticalTab>
-      <ClLayout paddingDirection="vertical" padding="normal">
-        <GenerateCode code={demoCode} />
-      </ClLayout>
     </View>
   );
 }

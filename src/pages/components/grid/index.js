@@ -1,8 +1,6 @@
-import Taro, { pxTransform } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import { ClCard, ClGrid, ClLayout, ClTitleBar } from "mp-colorui";
-import { View, Block } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import { gridCode, squaCode } from "./code";
+import { View } from "@tarojs/components";
 
 const generatorArr = num => {
   let i = 0;
@@ -54,7 +52,6 @@ export default class Grid extends Taro.Component {
         {this.renderCards(3)}
         {this.renderCards(4)}
         {this.renderCards(5)}
-        <GenerateCode code={gridCode} />
 
         <ClTitleBar
           title="等高"
@@ -69,7 +66,6 @@ export default class Grid extends Taro.Component {
             <View className="bg-blue light">3</View>
           </ClGrid>
         </ClCard>
-        <GenerateCode code={squaCode} />
       </ClLayout>
     );
   }

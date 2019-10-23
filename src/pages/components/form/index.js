@@ -10,8 +10,6 @@ import {
   ClMessage,
   ClCheckbox
 } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { fullCode } from "./code";
 
 export default class Cl_Form extends Taro.Component {
   static config = {
@@ -160,7 +158,6 @@ export default class Cl_Form extends Taro.Component {
             onClick={this.handleSubmit.bind(this)}
           />
         </ClLayout>
-        <GenerateCode code={fullCode} />
       </ClLayout>
     );
   }

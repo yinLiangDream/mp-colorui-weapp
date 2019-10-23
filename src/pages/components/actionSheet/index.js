@@ -7,8 +7,6 @@ import {
   ClActionSheet,
   ClFlex
 } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { cancelCode, colorCode, typeCode } from "./code";
 
 const baselist = [
   {
@@ -78,7 +76,6 @@ export default function ActionSheet() {
           />
         </ClFlex>
       </ClCard>
-      <GenerateCode code={typeCode} />
       <ClTitleBar type="icon" title="色彩" />
       <ClCard>
         <ClFlex align="center" justify="around">
@@ -112,7 +109,6 @@ export default function ActionSheet() {
           />
         </ClFlex>
       </ClCard>
-      <GenerateCode code={colorCode} />
       <ClTitleBar type="icon" title="取消" />
       <ClCard>
         <ClFlex align="center" justify="around">
@@ -148,7 +144,6 @@ export default function ActionSheet() {
           />
         </ClFlex>
       </ClCard>
-      <GenerateCode code={cancelCode} />
     </View>
   );
 }

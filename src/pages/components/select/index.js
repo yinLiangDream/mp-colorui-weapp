@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClSelect, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { dateCode, mutiCode, regionCode, singleCode, timeCode } from "./code";
 
 const single = ["苹果", "桃子", "葡萄", "火龙果", "西瓜"];
 
@@ -22,7 +20,6 @@ export default function Select() {
           title="选择水果"
         />
       </ClCard>
-      <GenerateCode code={singleCode} />
 
       <ClTitleBar
         title="多列选择"
@@ -39,7 +36,6 @@ export default function Select() {
           title="选择水果"
         />
       </ClCard>
-      <GenerateCode code={mutiCode} />
 
       <ClTitleBar
         title="时间选择"
@@ -50,7 +46,6 @@ export default function Select() {
       <ClCard>
         <ClSelect mode="time" title="选择时间" />
       </ClCard>
-      <GenerateCode code={timeCode} />
 
       <ClTitleBar
         title="地区选择"
@@ -61,7 +56,6 @@ export default function Select() {
       <ClCard>
         <ClSelect mode="region" title="选择地点" />
       </ClCard>
-      <GenerateCode code={regionCode} />
 
       <ClTitleBar
         title="日期选择"
@@ -72,7 +66,6 @@ export default function Select() {
       <ClCard>
         <ClSelect mode="date" title="选择日期" />
       </ClCard>
-      <GenerateCode code={dateCode} />
     </ClLayout>
   );
 }

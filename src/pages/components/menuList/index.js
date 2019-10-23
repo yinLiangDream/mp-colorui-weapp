@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
-import { ClCard, ClLayout, ClMenuList, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { contentCode, lineCode, typeCode } from "./code";
+import { ClLayout, ClMenuList, ClTitleBar } from "mp-colorui";
 
 const typeMenu = [
   {
@@ -39,7 +37,6 @@ export default function MenuList() {
       <ClLayout margin="normal" marginDirection="vertical">
         <ClMenuList list={typeMenu} />
       </ClLayout>
-      <GenerateCode code={typeCode} />
 
       <ClTitleBar
         title="图标&箭头"
@@ -50,7 +47,6 @@ export default function MenuList() {
       <ClLayout margin="normal" marginDirection="vertical">
         <ClMenuList card list={arrowMenu} />
       </ClLayout>
-      <GenerateCode code={contentCode} />
 
       <ClTitleBar
         title="短/长分割线"
@@ -64,7 +60,6 @@ export default function MenuList() {
       <ClLayout margin="normal" marginDirection="vertical">
         <ClMenuList list={typeMenu} />
       </ClLayout>
-      <GenerateCode code={lineCode} />
     </ClLayout>
   );
 }

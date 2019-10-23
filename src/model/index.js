@@ -3,6 +3,27 @@ export const updateList = [
     node: "2019-10"
   },
   {
+    title: "0.5.7",
+    time: "2019-10-23",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🌟Card 组件新增 title 属性",
+      "🌟Timeline 组件 新增点击事件"
+    ]
+  },
+  {
+    title: "0.5.6",
+    time: "2019-10-16",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🌟Text 组件新增 wrap 属性",
+      "🎉🎉新增 NoticeBar 组件",
+      "🐞fix Message 组件无类型提示问题"
+    ]
+  },
+  {
     title: "0.5.5",
     time: "2019-10-09",
     bgColor: "olive",

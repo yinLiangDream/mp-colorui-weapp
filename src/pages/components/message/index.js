@@ -7,8 +7,6 @@ import {
   ClButton,
   ClMessage
 } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { typeCode } from "./code";
 
 export default function Message() {
   const [text, setText] = useState("");
@@ -148,7 +146,6 @@ export default function Message() {
           </ClButton>
         </ClFlex>
       </ClCard>
-      <GenerateCode code={typeCode} />
     </ClLayout>
   );
 }

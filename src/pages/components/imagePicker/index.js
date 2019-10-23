@@ -6,8 +6,6 @@ import {
   ClTitleBar,
   ClButton
 } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { beforeDelCode, maxCode, normalCode } from "./code";
 
 export default function ImagePicker() {
   const [imgList, setImgList] = useState([]);
@@ -55,7 +53,6 @@ export default function ImagePicker() {
           </ClButton>
         </ClLayout>
       </ClCard>
-      <GenerateCode code={normalCode} />
 
       <ClTitleBar
         title="最多选择 3 张图片"
@@ -66,7 +63,6 @@ export default function ImagePicker() {
       <ClCard>
         <ClImagePicker chooseImgObj={{ count: 3 }} />
       </ClCard>
-      <GenerateCode code={maxCode} />
 
       <ClTitleBar
         title="删除图片确认操作"
@@ -87,7 +83,6 @@ export default function ImagePicker() {
           }}
         />
       </ClCard>
-      <GenerateCode code={beforeDelCode} />
     </ClLayout>
   );
 }

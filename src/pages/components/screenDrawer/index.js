@@ -1,8 +1,6 @@
 import Taro, { useState } from "@tarojs/taro";
 import { ClButton, ClCard, ClLayout, ClScreenDrawer } from "mp-colorui";
 import { View } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import { demoCode } from "./code";
 
 export default function ScreenDrawer() {
   const [show, setShow] = useState(false);
@@ -19,7 +17,6 @@ export default function ScreenDrawer() {
           点我打开全屏抽屉
         </ClButton>
       </ClCard>
-      <GenerateCode code={demoCode} />
     </View>
   );
   const mainContent = (

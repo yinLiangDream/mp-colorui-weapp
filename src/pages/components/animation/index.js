@@ -1,13 +1,5 @@
 import Taro, { useState } from "@tarojs/taro";
-import {
-  ClButton,
-  ClLayout,
-  ClTitleBar,
-  ClAnimation,
-  ClCard
-} from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { delayCode, normalCode, reverseCode } from "./code";
+import { ClButton, ClLayout, ClTitleBar, ClAnimation } from "mp-colorui";
 
 export default function Animation() {
   const animationName = [
@@ -92,7 +84,6 @@ export default function Animation() {
         textColor="black"
       />
       {showNormal}
-      <GenerateCode code={normalCode} />
       <ClTitleBar
         type="icon"
         title="反向效果"
@@ -100,7 +91,6 @@ export default function Animation() {
         textColor="black"
       />
       {showReserve}
-      <GenerateCode code={reverseCode} />
       <ClTitleBar
         type="icon"
         title="延迟执行"
@@ -108,7 +98,6 @@ export default function Animation() {
         textColor="black"
       />
       {delay}
-      <GenerateCode code={delayCode} />
     </ClLayout>
   );
 }

@@ -1,7 +1,5 @@
 import Taro, { useState } from "@tarojs/taro";
 import { ClCard, ClLayout, ClLoading, ClSwitch, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { barCode, imageCode, lineCode, modalCode } from "./code";
 
 export default function Loading() {
   const [barLoading, setBarLoading] = useState(false);
@@ -28,7 +26,6 @@ export default function Loading() {
           }}
         />
       </ClCard>
-      <GenerateCode code={barCode} />
       <ClLoading type="bar" show={barLoading} />
 
       <ClTitleBar
@@ -76,7 +73,6 @@ export default function Loading() {
           }}
         />
       </ClCard>
-      <GenerateCode code={lineCode} />
 
       <ClTitleBar
         title="modal加载"
@@ -102,7 +98,6 @@ export default function Loading() {
           }}
         />
       </ClCard>
-      <GenerateCode code={modalCode} />
 
       <ClTitleBar
         title="image加载"
@@ -128,7 +123,6 @@ export default function Loading() {
           }}
         />
       </ClCard>
-      <GenerateCode code={imageCode} />
     </ClLayout>
   );
 }

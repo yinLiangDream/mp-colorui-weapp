@@ -1,8 +1,6 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClTitleBar } from "mp-colorui";
 import { View } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import { floatCode, marginCode, normalCode, paddingCode } from "./code";
 
 export default function Layout() {
   return (
@@ -21,7 +19,6 @@ export default function Layout() {
           </View>
         </ClLayout>
       </ClCard>
-      <GenerateCode code={normalCode} />
       <ClCard>
         <View className="bg-black">
           <ClLayout padding="normal" paddingDirection="around">
@@ -31,7 +28,6 @@ export default function Layout() {
           </ClLayout>
         </View>
       </ClCard>
-      <GenerateCode code={paddingCode} />
       <ClCard>
         <View className="bg-black">
           <ClLayout margin="normal" marginDirection="around">
@@ -42,14 +38,12 @@ export default function Layout() {
           </ClLayout>
         </View>
       </ClCard>
-      <GenerateCode code={marginCode} />
 
       <ClTitleBar title="浮动" textColor="black" type="icon" subTitle="float" />
       <ClCard>
         <ClLayout float="right">我是一块内容，我是右浮动</ClLayout>
         <ClLayout float="left">我是一块内容，我是左浮动</ClLayout>
       </ClCard>
-      <GenerateCode code={floatCode} />
     </ClLayout>
   );
 }

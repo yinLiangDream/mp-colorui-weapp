@@ -1,7 +1,5 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClTabBar, ClTitleBar } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import { activeColorCode, bgColorCode, normalCode, upCode } from "./code";
 
 const tabs = [
   {
@@ -68,7 +66,6 @@ export default function TabBar() {
       <ClCard>
         <ClTabBar active={1} tabs={defaultTabs} />
       </ClCard>
-      <GenerateCode code={normalCode} />
 
       <ClTitleBar
         title="背景色"
@@ -79,7 +76,6 @@ export default function TabBar() {
       <ClCard>
         <ClTabBar active={1} bgColor="light-cyan" tabs={defaultTabs} />
       </ClCard>
-      <GenerateCode code={bgColorCode} />
 
       <ClTitleBar
         title="激活色"
@@ -95,7 +91,6 @@ export default function TabBar() {
           tabs={defaultTabs}
         />
       </ClCard>
-      <GenerateCode code={activeColorCode} />
 
       <ClTitleBar
         title="突出"
@@ -111,7 +106,6 @@ export default function TabBar() {
           tabs={actionTabs}
         />
       </ClCard>
-      <GenerateCode code={upCode} />
 
       <ClLayout
         padding="large"

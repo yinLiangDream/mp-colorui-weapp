@@ -1,15 +1,6 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClTabs, ClTitleBar } from "mp-colorui";
 import { View } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import {
-  centerCode,
-  colorCode,
-  iconCode,
-  moveCode,
-  normalCode,
-  verbCode
-} from "./code";
 
 function gen(item, index) {
   return {
@@ -71,7 +62,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={normalCode} />
       <ClTitleBar
         title="内容可拖动"
         textColor="black"
@@ -87,7 +77,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={moveCode} />
 
       <ClTitleBar title="平分" textColor="black" type="icon" subTitle="verb" />
       <ClCard>
@@ -99,7 +88,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={verbCode} />
 
       <ClTitleBar
         title="居中"
@@ -122,7 +110,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={centerCode} />
 
       <ClTitleBar
         title="激活色&背景色"
@@ -147,7 +134,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={colorCode} />
 
       <ClTitleBar
         title="带图标"
@@ -164,7 +150,6 @@ export default function Tabs() {
           ))}
         </ClTabs>
       </ClCard>
-      <GenerateCode code={iconCode} />
     </ClLayout>
   );
 }

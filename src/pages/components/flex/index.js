@@ -1,8 +1,6 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClFlex, ClLayout, ClTitleBar } from "mp-colorui";
 import { View } from "@tarojs/components";
-import GenerateCode from "../../../components/generateCode";
-import { alignCode, justifyCode, perCode, sizeCode } from "./code";
 
 const size = ["xs", "sm", "df", "lg", "xl"];
 
@@ -68,7 +66,6 @@ export default function Flex() {
         subTitle="basis"
       />
       {base}
-      <GenerateCode code={sizeCode} />
 
       <ClTitleBar
         title="比例布局"
@@ -79,7 +76,6 @@ export default function Flex() {
       <ClCard>
         <ClFlex>{per}</ClFlex>
       </ClCard>
-      <GenerateCode code={perCode} />
 
       <ClTitleBar
         title="水平对齐"
@@ -88,7 +84,6 @@ export default function Flex() {
         subTitle="justify"
       />
       {justifyComponent}
-      <GenerateCode code={justifyCode} />
 
       <ClTitleBar
         title="垂直对齐"
@@ -97,7 +92,6 @@ export default function Flex() {
         subTitle="align"
       />
       {alignComponent}
-      <GenerateCode code={alignCode} />
     </ClLayout>
   );
 }

@@ -9,15 +9,6 @@ import {
   ClCard,
   ClText
 } from "mp-colorui";
-import GenerateCode from "../../../components/generateCode";
-import {
-  autoCode,
-  colorCode,
-  customCode,
-  lengthCode,
-  positionCode,
-  touchTypeCode
-} from "./code";
 
 export default function Tip() {
   const renderMessage = (
@@ -68,9 +59,6 @@ export default function Tip() {
           </ClTip>
         </ClFlex>
       </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={positionCode} />
-      </ClLayout>
       <ClTitleBar title="触发方式" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
         <ClFlex justify="around">
@@ -81,9 +69,6 @@ export default function Tip() {
             <ClButton text="触摸触发" shape="round" />
           </ClTip>
         </ClFlex>
-      </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={touchTypeCode} />
       </ClLayout>
       <ClTitleBar title="自适应" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
@@ -101,9 +86,6 @@ export default function Tip() {
             <ClButton text="右侧出现" shape="round" />
           </ClTip>
         </ClFlex>
-      </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={autoCode} />
       </ClLayout>
       <ClTitleBar title="背景色" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
@@ -126,9 +108,6 @@ export default function Tip() {
           </ClTip>
         </ClFlex>
       </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={colorCode} />
-      </ClLayout>
       <ClTitleBar title="自定义渲染" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
         <ClFlex justify="between">
@@ -143,9 +122,6 @@ export default function Tip() {
           </ClTip>
         </ClFlex>
       </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={customCode} />
-      </ClLayout>
       <ClTitleBar title="长度" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
         <ClFlex justify="between">
@@ -156,9 +132,6 @@ export default function Tip() {
             <ClButton text="长度200" shape="round" />
           </ClTip>
         </ClFlex>
-      </ClLayout>
-      <ClLayout padding="normal" paddingDirection="vertical">
-        <GenerateCode code={lengthCode} />
       </ClLayout>
     </ClLayout>
   );
