@@ -3,6 +3,19 @@ export const updateList = [
     node: "2019-10"
   },
   {
+    title: "0.5.8",
+    time: "2019-10-28",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🌟Input 组件新增 autoComplete、 completes、completeLoading、clear 属性",
+      "🌟ShopBar 组件 tabs 属性新增 moreAction 属性，支持 openType",
+      "🐞fix #18 ClTabBar 的 active 不能动态设置问题",
+      "🐞fix 未安装相关依赖会导致部分组件报错问题",
+      "🐞fix shopBar 组件会警告 index 问题"
+    ]
+  },
+  {
     title: "0.5.7",
     time: "2019-10-23",
     bgColor: "olive",

@@ -1,13 +1,36 @@
-import Taro from "@tarojs/taro";
+import Taro, { useState } from "@tarojs/taro";
 import { ClCard, ClInput, ClLayout, ClTitleBar } from "mp-colorui";
 
 export default function Input() {
+  const [showLoading, setLoading] = useState(true);
   return (
     <ClLayout>
       <ClTitleBar title="自动聚焦" textColor="black" type="icon" />
       <ClCard>
-        <ClInput defaultValue="自动聚焦" />
+        <ClInput defaultValue="自动聚焦" autoFocus />
       </ClCard>
+
+      <ClTitleBar title="清除" textColor="black" type="icon" />
+      <ClCard>
+        <ClInput defaultValue="清除按钮" clear />
+      </ClCard>
+
+      <ClTitleBar title="自动补全" textColor="black" type="icon" />
+      <ClInput
+        defaultValue="自动补全"
+        style={{
+          zIndex: 1
+        }}
+        autoComplete
+        completes={["补全内容 1", "补全内容 2"]}
+        completeLoading={showLoading}
+        onChange={() => {
+          setLoading(true);
+          setTimeout(() => {
+            setLoading(false);
+          }, 1000);
+        }}
+      />
 
       <ClTitleBar title="默认值" textColor="black" type="icon" />
       <ClCard>

@@ -48,6 +48,31 @@ const bottom = [
   }
 ];
 
+const openTypes = [
+  {
+    icon: "friendfamous",
+    title: "用户",
+    moreAction: {
+      openType: 'getUserInfo',
+      onGetUserInfo: res => {
+        if (res.detail.userInfo) {
+          Taro.showToast({
+            title: res.detail.userInfo.nickName,
+            icon: "none"
+          });
+        }
+      }
+    }
+  },
+  {
+    icon: "share",
+    title: '分享',
+    moreAction: {
+      openType: 'share'
+    }
+  }
+]
+
 export default class ShopBar extends Taro.Component {
   config = {
     navigationBarTitleText: "ShopBar 购物栏"
@@ -115,6 +140,16 @@ export default class ShopBar extends Taro.Component {
             buttons={buttons}
           />
         </ClCard>
+
+        <ClTitleBar title="openType 能力" textColor="black" type="icon" />
+        <ClShopBar
+          onClickButton={index => {
+            this.clickButton(index);
+          }}
+          bgColor="gradualGreen"
+          tabs={openTypes}
+          buttons={buttons}
+        />
 
         <ClTitleBar
           title="分割线"
