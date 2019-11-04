@@ -1,5 +1,18 @@
 export const updateList = [
   {
+    node: "2019-11"
+  },
+  {
+    title: "0.5.9",
+    time: "2019-11-04",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🌟feat Accordion 组件新增 height 属性，可以自定义高度",
+      "🌟feat Flex 组件 align 属性新增 stretch 选项 #28"
+    ]
+  },
+  {
     node: "2019-10"
   },
   {
@@ -20,10 +33,7 @@ export const updateList = [
     time: "2019-10-23",
     bgColor: "olive",
     iconColor: "olive",
-    content: [
-      "🌟Card 组件新增 title 属性",
-      "🌟Timeline 组件 新增点击事件"
-    ]
+    content: ["🌟Card 组件新增 title 属性", "🌟Timeline 组件 新增点击事件"]
   },
   {
     title: "0.5.6",

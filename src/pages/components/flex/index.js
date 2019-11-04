@@ -8,7 +8,7 @@ const percent = ["sub", "twice", "treble"];
 const colors = ["blue", "red", "green"];
 
 const justify = ["start", "end", "center", "between", "around"];
-const align = ["start", "end", "center"];
+const align = ["start", "end", "center", "stretch"];
 
 export default function Flex() {
   const base = size.map(cc => (
@@ -47,13 +47,14 @@ export default function Flex() {
   const alignComponent = align.map(al => (
     <ClCard key={al}>
       <ClFlex align={al}>
-        <ClCard bgColor="light-blue" shadow={false}>
+        <View className="bg-gradual-blue padding margin">
           <View>{al}</View>
           <View>{al}</View>
-        </ClCard>
-        <ClCard bgColor="light-blue" shadow={false}>
-          <View>{al}</View>
-        </ClCard>
+        </View>
+
+        <View className="bg-gradual-blue padding margin">
+          <View style={{ height: "100%" }}>{al}</View>
+        </View>
       </ClFlex>
     </ClCard>
   ));

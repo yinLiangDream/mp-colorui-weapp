@@ -6,7 +6,7 @@ export default class Accordion extends Taro.Component {
     navigationBarTitleText: "Accordion 手风琴"
   };
 
-  renderContent(card, animation, speed = 0.15) {
+  renderContent(card, animation, speed = 0.15, height = 0) {
     return (
       <ClLayout margin="normal" marginDirection="vertical">
         <ClAccordion
@@ -14,6 +14,7 @@ export default class Accordion extends Taro.Component {
           card={card}
           animation={animation}
           speed={speed}
+          height={height}
         >
           <ClLayout padding="normal" paddingDirection="around">
             <ClCard type="full">
@@ -73,6 +74,13 @@ export default class Accordion extends Taro.Component {
           textColor="black"
         />
         {this.renderContent(false, true, 0.5)}
+        <ClTitleBar
+          type="icon"
+          title="设置高度"
+          iconColor="red"
+          textColor="black"
+        />
+        {this.renderContent(true, true, undefined, 200)}
       </ClLayout>
     );
   }
