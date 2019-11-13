@@ -3,6 +3,16 @@ export const updateList = [
     node: "2019-11"
   },
   {
+    title: "0.5.10",
+    time: "2019-11-13",
+    bgColor: "olive",
+    iconColor: "olive",
+    content: [
+      "🐞fix Tip 组件 无法手动关闭 tip 的问题 #33",
+      "🌟feat shopBar、tabBar 组件新增 safeArea 属性"
+    ]
+  },
+  {
     title: "0.5.9",
     time: "2019-11-04",
     bgColor: "olive",

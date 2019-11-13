@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import Taro, { useState } from "@tarojs/taro";
 import {
   ClLayout,
   ClTitleBar,
@@ -40,6 +40,7 @@ export default function Tip() {
       </ClAccordion>
     </ClLayout>
   );
+  const [show, setShow] = useState(true);
   return (
     <ClLayout>
       <ClTitleBar title="方向" type="icon" />
@@ -62,7 +63,15 @@ export default function Tip() {
       <ClTitleBar title="触发方式" type="icon" />
       <ClLayout padding="normal" paddingDirection="around">
         <ClFlex justify="around">
-          <ClTip message="我是点击触发" direction="top" mode="click">
+          <ClTip
+            message="我是点击触发"
+            direction="top"
+            mode="click"
+            show={show}
+            onChange={flag => {
+              setShow(flag);
+            }}
+          >
             <ClButton text="点击触发" shape="round" />
           </ClTip>
           <ClTip message="我是触摸触发" direction="right">
@@ -117,6 +126,9 @@ export default function Tip() {
             bgColor="gradualBlue"
             mode="click"
             width={350}
+            onChange={flag => {
+              setShow(false);
+            }}
           >
             <ClButton text="渲染的内容" shape="round" />
           </ClTip>
