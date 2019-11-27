@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import Taro, { useState } from "@tarojs/taro";
 import { ClVerticalTab, ClVerticalTabCell } from "mp-colorui";
 import { View } from "@tarojs/components";
 
@@ -9,7 +9,7 @@ export default function VerticalTab() {
   }));
   return (
     <View>
-      <ClVerticalTab tabs={tabs} height={1000}>
+      <ClVerticalTab tabs={tabs} height="full">
         <View>
           {tabs.map(item => (
             <View id={item.id} key={item.name}>

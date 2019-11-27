@@ -1,6 +1,7 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClTitleBar } from "mp-colorui";
 import { View } from "@tarojs/components";
+import "mp-colorui/src/style/category/bgColor.scss";
 
 export default function Layout() {
   return (

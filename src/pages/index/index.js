@@ -15,7 +15,7 @@ import {
 import UserCenter from "./components/userCenter";
 import * as menu from "../../constant/menu.js";
 import "./index.scss";
-import { updateList } from "../../model/index";
+// import { updateList } from "../../model/index";
 
 const allList = [].concat(
   menu.baseList,
@@ -41,12 +41,12 @@ export default function Index() {
       badge: false
     }
   ];
-  const updated = updateList.find(item => item.title);
+  const [updated, setUpdated] = useState(null);
   const [active, setActive] = useState(0);
   const [animate, setAnimation] = useState("none");
   const [show, setShow] = useState(false);
   const [tempfilter, setTempfilter] = useState([]);
-  const [showUpdate, setShowUpdate] = useState(true);
+  const [showUpdate, setShowUpdate] = useState(false);
 
   // 事件声明区
   useEffect(() => {
@@ -54,6 +54,13 @@ export default function Index() {
       setAnimation("scale-up");
       setShow(true);
     }, 800);
+    Taro.request({
+      url:
+        "https://mp-colorui-1255362963.cos.ap-chengdu.myqcloud.com/update/update.json"
+    }).then(res => {
+      setUpdated(res.data[0]);
+      setShowUpdate(true);
+    });
     if (
       Taro.getEnv() !== Taro.ENV_TYPE.WEB &&
       Taro.canIUse("getUpdateManager")
@@ -200,15 +207,20 @@ export default function Index() {
         onCancel={() => {
           setShowUpdate(false);
         }}
-        title={`${updated.title} 版本`}
+        title={`${updated && updated.title} 版本`}
       >
         <ClFlex direction="column">
           <View style={{ width: "100%" }}>
-            <ClText text={`${updated.time}`} textColor="cyan" align="right" />
+            <ClText
+              text={`${updated && updated.time}`}
+              textColor="cyan"
+              align="right"
+            />
           </View>
-          {updated.content.map(text => (
-            <ClText text={text} size="small" textColor="grey" />
-          ))}
+          {updated &&
+            updated.content.map(text => (
+              <ClText text={text} size="small" textColor="grey" />
+            ))}
         </ClFlex>
       </ClModal>
     </View>

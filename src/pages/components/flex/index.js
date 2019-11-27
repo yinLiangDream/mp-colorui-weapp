@@ -1,6 +1,9 @@
 import Taro from "@tarojs/taro";
 import { ClCard, ClFlex, ClLayout, ClTitleBar } from "mp-colorui";
 import { View } from "@tarojs/components";
+import "mp-colorui/src/style/category/text.scss";
+import "mp-colorui/src/style/category/layout.scss";
+import "mp-colorui/src/style/category/bgColor.scss";
 
 const size = ["xs", "sm", "df", "lg", "xl"];
 

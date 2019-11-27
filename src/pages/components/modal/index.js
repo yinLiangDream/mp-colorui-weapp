@@ -10,6 +10,7 @@ import {
   ClTimeline
 } from "mp-colorui";
 import { View } from "@tarojs/components";
+import "mp-colorui/src/style/category/layout.scss";
 
 export default function Modal() {
   const [normal, setNormal] = useState(false);

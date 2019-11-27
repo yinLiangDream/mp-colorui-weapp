@@ -1,4 +1,5 @@
 import Taro from "@tarojs/taro";
+import { Swiper } from "@tarojs/components";
 import { ClLayout, ClSwiper, ClTitleBar } from "mp-colorui";
 
 export default function SwiperView() {
