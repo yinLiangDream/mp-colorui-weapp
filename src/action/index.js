@@ -1,8 +1,8 @@
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { ClLayout, ClTitleBar } from "mp-colorui";
-import MenuNavigate from "../../components/menuNavigate";
-import { actionList } from "../../constant/menu";
+import MenuNavigate from "../../../components/menuNavigate";
+import { actionList } from "../../../constant/menu";
 
 export default function Action() {
   return (

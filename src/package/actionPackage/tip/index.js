@@ -40,7 +40,7 @@ export default function Tip() {
       </ClAccordion>
     </ClLayout>
   );
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
     <ClLayout>
       <ClTitleBar title="方向" type="icon" />

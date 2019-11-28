@@ -103,7 +103,7 @@ export default function Index() {
       key={item.key}
       onClick={() => {
         Taro.navigateTo({
-          url: `/pages/${item.key}/index`
+          url: `/package/${item.key}Package/index/index`
         });
       }}
     >

@@ -1,25 +1,25 @@
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { ClLayout, ClTitleBar } from "mp-colorui";
-import MenuNavigate from "../../components/menuNavigate";
-import { formList } from "../../constant/menu";
+import MenuNavigate from "../../../components/menuNavigate";
+import { layoutList } from "../../../constant/menu";
 
-export default function Form() {
+export default function Layout() {
   return (
     <View>
       <ClTitleBar
-        title="表单"
+        title="布局"
         type="border-title"
         textColor="black"
         borderColor="blue"
       />
       <ClLayout padding="normal" paddingDirection="vertical">
-        <MenuNavigate list={formList} />
+        <MenuNavigate list={layoutList} name="layout" />
       </ClLayout>
     </View>
   );
 }
 
-Form.config = {
-  navigationBarTitleText: "表单"
+Layout.config = {
+  navigationBarTitleText: "布局"
 };

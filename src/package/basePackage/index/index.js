@@ -1,9 +1,9 @@
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { ClLayout, ClTitleBar } from "mp-colorui";
-import MenuNavigate from "../../components/menuNavigate";
+import MenuNavigate from "../../../components/menuNavigate";
 
-import { baseList } from "../../constant/menu";
+import { baseList } from "../../../constant/menu";
 
 export default function Base() {
   return (
@@ -15,7 +15,7 @@ export default function Base() {
         borderColor="blue"
       />
       <ClLayout padding="normal" paddingDirection="vertical">
-        <MenuNavigate list={baseList} />
+        <MenuNavigate list={baseList} name="base" />
       </ClLayout>
     </View>
   );
