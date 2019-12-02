@@ -41,6 +41,7 @@ export default function ActionSheet() {
           setShowCancel(false);
         }}
         onClick={index => {
+          setShow(false);
           onClick(index);
         }}
       />

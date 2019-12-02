@@ -26,6 +26,13 @@ const allList = [].concat(
   menu.viewList
 );
 
+const basePackage = menu.baseList.map(item => item.key);
+const actionPackage = menu.actionList.map(item => item.key);
+const formPackage = menu.formList.map(item => item.key);
+const layoutPackage = menu.layoutList.map(item => item.key);
+const navigatePackage = menu.navigateList.map(item => item.key);
+const viewPackage = menu.viewList.map(item => item.key);
+
 export default function Index() {
   // 变量声明区
   const icons = ["emoji", "cascades", "we", "form", "apps", "taxi"];
@@ -162,12 +169,29 @@ export default function Index() {
                           .toLowerCase()
                           .includes(value.toLocaleLowerCase())
                       )
-                      .map(item => ({
-                        arrow: true,
-                        title: item.name,
-                        key: item.key,
-                        url: `/pages/components/${item.key}/index`
-                      }))
+                      .map(item => {
+                        console.log(item);
+                        let packageName = "";
+                        if (basePackage.includes(item.key)) {
+                          packageName = "basePackage";
+                        } else if (actionPackage.includes(item.key)) {
+                          packageName = "actionPackage";
+                        } else if (formPackage.includes(item.key)) {
+                          packageName = "formPackage";
+                        } else if (layoutPackage.includes(item.key)) {
+                          packageName = "layoutPackage";
+                        } else if (navigatePackage.includes(item.key)) {
+                          packageName = "navigatePackage";
+                        } else if (viewPackage.includes(item.key)) {
+                          packageName = "viewPackage";
+                        }
+                        return {
+                          arrow: true,
+                          title: item.name,
+                          key: item.key,
+                          url: `/package/${packageName}/${item.key}/index`
+                        };
+                      })
                   : []
               );
             }}
