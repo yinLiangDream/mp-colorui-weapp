@@ -149,7 +149,8 @@ class App extends Component {
           "titleBar/index",
           "divider/index",
           "curtain/index",
-          "noticeBar/index"
+          "noticeBar/index",
+          "calendar/index"
         ]
       }
     ],

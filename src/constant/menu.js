@@ -133,6 +133,10 @@ export const viewList = [
   {
     key: "noticeBar",
     name: "NoticeBar 通告栏"
+  },
+  {
+    key: "calendar",
+    name: "Calendar 日历"
   }
 ];
 

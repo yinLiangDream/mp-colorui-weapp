@@ -1,6 +1,6 @@
-import Taro from "@tarojs/taro";
-import { Swiper } from "@tarojs/components";
-import { ClLayout, ClSwiper, ClTitleBar } from "mp-colorui";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { View } from "@tarojs/components";
+import { ClSwiper, ClTitleBar } from "mp-colorui";
 
 export default function SwiperView() {
   const fileList = [
@@ -39,7 +39,7 @@ export default function SwiperView() {
   ];
 
   return (
-    <ClLayout>
+    <View>
       <ClTitleBar title="类型" textColor="black" type="icon" subTitle="type" />
       <ClSwiper type="card" list={fileList} circular />
       <ClSwiper type="screen" list={fileList} circular />
@@ -64,11 +64,11 @@ export default function SwiperView() {
         indicatorDots
         indicatorColor="#8799a3"
         indicatorActiveColor="#0081ff"
-        onClick={index => {
-          console.log(index);
+        style={{
+          height: pxTransform(450)
         }}
       />
-    </ClLayout>
+    </View>
   );
 }
 
