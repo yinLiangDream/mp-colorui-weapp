@@ -168,6 +168,10 @@ export const formList = [
   {
     key: "imagePicker",
     name: "ImagePicker 图片选择器"
+  },
+  {
+    key: "textarea",
+    name: "Textarea 输入域"
   }
 ];
 

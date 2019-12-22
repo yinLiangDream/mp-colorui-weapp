@@ -72,7 +72,7 @@ export default function Tabs() {
         <ClTabs tabs={defaultTabs} touchMove>
           {defaultTabs.map(item => (
             <View key={item.id} id={item.id}>
-              {item.text}
+              <View>{item.text}</View>
             </View>
           ))}
         </ClTabs>

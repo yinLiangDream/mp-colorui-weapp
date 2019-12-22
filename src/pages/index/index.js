@@ -170,7 +170,6 @@ export default function Index() {
                           .includes(value.toLocaleLowerCase())
                       )
                       .map(item => {
-                        console.log(item);
                         let packageName = "";
                         if (basePackage.includes(item.key)) {
                           packageName = "basePackage";
@@ -243,7 +242,9 @@ export default function Index() {
           </View>
           {updated &&
             updated.content.map(text => (
-              <ClText text={text} size="small" textColor="grey" />
+              <View key={text}>
+                <ClText text={text} size="small" textColor="grey" />
+              </View>
             ))}
         </ClFlex>
       </ClModal>

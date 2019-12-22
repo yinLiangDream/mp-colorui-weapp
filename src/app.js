@@ -108,7 +108,8 @@ class App extends Component {
           "checkbox/index",
           "switch/index",
           "select/index",
-          "imagePicker/index"
+          "imagePicker/index",
+          "textarea/index"
         ]
       },
       {
